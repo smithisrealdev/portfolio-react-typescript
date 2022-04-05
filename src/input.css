@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.font-atma {
+    font-family: 'Atma', cursive;
+}
+
+.pb-custom{
+   padding-bottom: 75%;
+}
+
+.text-color-custom {
+    color: #08fdd8;
+}
