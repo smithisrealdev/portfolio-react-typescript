@@ -8,15 +8,14 @@ type cardProps = {
     imgUrl: string,
     text: string
 }
-export default function card({imgUrl,text}:cardProps) {
+export default function card({ imgUrl, text }: cardProps) {
     return (
-        <Card className='mt-4' sx={{ maxWidth: 85 }}>
+        <Card className='mt-4' sx={{ maxWidth: 85, minHeight: 100 }}>
             <CardActionArea>
                 <CardMedia
+                    className='object-none h-20 bg-black'
                     component="img"
-                    height="145px"
                     image={imgUrl}
-                    alt="green iguana"
                 />
                 <Box className='flex w-full items-center justify-center' >
                     <p className='font-atma font-medium' >
