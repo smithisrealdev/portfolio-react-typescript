@@ -5,7 +5,7 @@ import Skill from '../../skill/page/skill'
 import Box from '@mui/material/Box';
 function home() {
   return (
-    <Box className='bg-black w-full'>
+    <Box className='bg-main w-full'>
      {/* <Navbar /> */}
       <Blog />
       <Skill />

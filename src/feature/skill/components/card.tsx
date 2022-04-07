@@ -4,16 +4,17 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
+import {onEnter} from '../container/withHoverCard'
 type cardProps = {
     imgUrl: string,
     text: string
 }
 export default function card({ imgUrl, text }: cardProps) {
     return (
-        <Card className='mt-4' sx={{ maxWidth: 85, minHeight: 100 }}>
+        <Card onMouseEnter={onEnter}  className='mt-4' sx={{ maxWidth: 85, minHeight: 100 }}>
             <CardActionArea>
                 <CardMedia
-                    className='object-none h-20 bg-black'
+                    className='object-none h-20 bg-main'
                     component="img"
                     image={imgUrl}
                 />

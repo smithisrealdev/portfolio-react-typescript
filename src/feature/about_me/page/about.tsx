@@ -4,7 +4,7 @@ import {onEnter} from '../container/withHoverImage'
 import ProfileImg from '../../../images/profile.jpg'
 export default function about() {
     return (
-        <div className="mt-20 pl-28 w-full h-full bg-black">
+        <div className="mt-20 pl-28 w-full h-full bg-main">
             <Title noUseLeave={false}  noUseEnter={true} text='A|b|o|u|t' />
             <div className='flex'>
                 <div className='basis-3/5 mr-40'>
@@ -25,8 +25,8 @@ export default function about() {
                 </p>
                 </div>
                 <div className='basis-2/5 mr-28'>
-                    <div className='h-0 pb-custom relative overflow-hidden rounded-xl cursor-pointer' onMouseEnter={onEnter}>
-                        <img className='absolute top-0 left-0 w-full h-full object-cover'
+                    <div className='h-0 pb-custom relative overflow-hidden rounded-md cursor-pointer rotate-6 ' onMouseEnter={onEnter}>
+                        <img className='absolute top-0 left-0 w-full h-full object-cover '
                             src={ProfileImg}
                         />
                     </div>

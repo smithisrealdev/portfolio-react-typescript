@@ -5,7 +5,7 @@ export const onEnter = ({ currentTarget }:React.MouseEvent<HTMLDivElement> ) => 
         name: "pulse",
         effect(currentTarget:any) {
           return gsap.fromTo(currentTarget, {
-            color: "#08fdd8",
+            color: "#15BECE",
             scale: 1
           }, {
             scale: 1.5,
@@ -23,6 +23,6 @@ export const onLeave = ({ currentTarget }:React.MouseEvent<HTMLDivElement>) => {
 };
 
 export const onUseLeave = ({ currentTarget }:React.MouseEvent<HTMLDivElement>) => {
-  gsap.to(currentTarget, { color: "#08fdd8", });
+  gsap.to(currentTarget, { color: "#15BECE", });
 };
 

@@ -12,5 +12,16 @@
 }
 
 .text-color-custom {
-    color: #08fdd8;
+    color: #15BECE;
+}
+
+.bg-main {
+    background-color: #151D2D ;
+}
+.bg-resume {
+    background-color: #D61320;
+}
+.resume-custom {
+    bottom: 122px;
+    left: 122px;
 }

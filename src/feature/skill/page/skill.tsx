@@ -1,12 +1,13 @@
-import React from 'react'
-import Title from '../../../shared/components/animation/withAnimationHoveText'
-import FrontEndList from '../container/withFrontEndList'
-import BackEndList from '../container/withBackEndList'
-import OtherList from '../container/withOtherList'
-import Box from '@mui/material/Box'
+import React from 'react';
+import Title from '../../../shared/components/animation/withAnimationHoveText';
+import Box from '@mui/material/Box';
+import {FrontEndList} from '../mock/dataFrontEndList';
+import {BackEndList} from '../mock/dataBackEndlist';
+import {OtherList} from '../mock/dataOtherList';
+import CardLsit from '../components/cardList'
 export default function skill() {
     return (
-        <Box className="pl-28 w-full h-full bg-black">
+        <Box className="pl-28 w-full h-full bg-main">
             <Title noUseLeave={false} noUseEnter={true} text='S|k|i|l|l' />
             <div className='flex justify-between pl-16'>
                 <div className='w-3/4 border-r-2'>
@@ -15,8 +16,7 @@ export default function skill() {
                             Fron End
                         </h1>
                     </div>
-                    <FrontEndList />
-
+                    <CardLsit listCard={FrontEndList} />
                 </div>
                 <div className='w-3/4 border-r-2'>
                     <div className='justify-center flex'>
@@ -24,7 +24,7 @@ export default function skill() {
                             Back End
                         </h1>
                     </div>
-                   <BackEndList />
+                    <CardLsit listCard={BackEndList} />
                 </div>
                 <div className='w-3/4'>
                     <div className='justify-center flex'>
@@ -32,10 +32,8 @@ export default function skill() {
                             Other
                         </h1>
                     </div>
-                   <OtherList />
+                    <CardLsit listCard={OtherList} />
                 </div>
-
-
             </div>
         </Box>
     )
