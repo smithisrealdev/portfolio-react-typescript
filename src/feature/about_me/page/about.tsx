@@ -2,26 +2,27 @@ import React from 'react'
 import Title from '../../../shared/components/animation/withAnimationHoveText'
 import {onEnter} from '../container/withHoverImage'
 import ProfileImg from '../../../images/profile.jpg'
+import {FormatMessage} from '../../change_lang/change'
 export default function about() {
     return (
-        <div className="mt-20 pl-28 w-full h-full bg-main">
-            <Title noUseLeave={false}  noUseEnter={true} text='A|b|o|u|t' />
+        <div className="mt-20 pl-28">
+            <Title noUseLeave={false}  noUseEnter={true} text={FormatMessage('about.title')} />
             <div className='flex'>
                 <div className='basis-3/5 mr-40'>
                     <p className='text-xl font-light font-atma text-white'>
-                        I have experience working with both websites and mobile applications using the <b className='font-semibold'>React</b> framework. I am currently working as a FullStack Developer at 3i infotech on-site True Corporation, improving website and API services in sales campaigns to company clients. And I used to work as a freelancer building a mobile learning app called <b className='font-semibold'>archiveNex</b> app. You can find and download it in the App Store and Google Play Store.
+                        {FormatMessage('about.story.1')} <b className='font-semibold'>{FormatMessage('about.story.2')}</b> {FormatMessage('about.story.3')} <b className='font-semibold'>{FormatMessage('about.story.4')}</b> {FormatMessage('about.story.5')}
                         <br />
                         <br />
                         <br />
-                        <b className='font-semibold'>Competencies</b> : ReactJs/React Native 
+                        <b className='font-semibold'>{FormatMessage('about.story.title.1')}</b> : {FormatMessage('about.story.title.1.substory')}
                         <br />
-                        <b className='font-semibold'>Framework</b> : React,Redux/Mobx,GoLang
+                        <b className='font-semibold'>{FormatMessage('about.story.title.2')}</b> : {FormatMessage('about.story.title.2.substory')}
                         <br />
-                        <b className='font-semibold'>Language</b> : Javascript,Typescript,Css,Python,Java
+                        <b className='font-semibold'>{FormatMessage('about.story.title.3')}</b> : {FormatMessage('about.story.title.3.substory')}
                         <br />
-                        <b className='font-semibold'>Statement</b> : Higher-Order Components (Hoc),Material UI, Style -component
+                        <b className='font-semibold'>{FormatMessage('about.story.title.4')}</b> : {FormatMessage('about.story.title.4.substory')}
                         <br />
-                        <b className='font-semibold'>Tool</b> : Jira,Tello,Bitbucket,GitLab,GitHub Services: Jenkins, Kibana, Kong Services
+                        <b className='font-semibold'>{FormatMessage('about.story.title.5')}</b> : {FormatMessage('about.story.title.5.substory')}
                 </p>
                 </div>
                 <div className='basis-2/5 mr-28'>

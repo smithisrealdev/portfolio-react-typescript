@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 function App() {
   return (
-    <div className='w-full'>
+    <div className='w-full h-screen bg-main'>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -24,8 +24,8 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-
       </BrowserRouter>
+      
     </div>
   );
 }

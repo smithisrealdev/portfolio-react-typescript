@@ -10,6 +10,7 @@ function home() {
       <Blog />
       <Skill />
       <About />
+      
     </Box>
   );
 }

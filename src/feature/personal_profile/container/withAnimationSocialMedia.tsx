@@ -17,7 +17,6 @@ export default function withAnimationSocialMedia() {
             yoyo: true
         });
     })
-
     const onEnter = ({ currentTarget }: React.MouseEvent<HTMLDivElement>) => {
         gsap.to(currentTarget, { rotationZ: "+=860", scale: 1 });
     };
