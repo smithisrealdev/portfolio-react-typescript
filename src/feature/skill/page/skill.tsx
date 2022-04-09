@@ -8,7 +8,7 @@ import {FormatMessage} from '../../change_lang/change'
 import CardLsit from '../components/cardList'
 export default function skill() {
     return (
-        <Box className="pl-28 max-h-full">
+        <Box className="pl-28">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('skill.title')} />
             <div className='flex justify-between pl-16'>
                 <div className='w-3/4 border-r-2'>

@@ -11,11 +11,13 @@ export default function resume() {
         gsap.to(q(".boxBg"), {
             x: 6, 
             y: -7,
+            duration: 1,
             // repeat: 1,
         });
         gsap.to(q(".box2"), {
             x: 17, 
             y: -18,
+            duration: 1,
             // repeat: 1,
         });
     };
@@ -23,11 +25,13 @@ export default function resume() {
         gsap.to(q(".boxBg"), {
             x:0, 
             y: 0,
+            duration: 1,
             // repeat: 1,
         });
         gsap.to(q(".box2"), {
             x: 0, 
             y: 0,
+             duration: 1,
             // repeat: 1,
         });
     };

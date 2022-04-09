@@ -14,6 +14,7 @@ export default function withAnimationSocialMedia() {
             // repeatDelay: 1,
             ease: "bounce",
             yoyoEase: "power3",
+            duration: 2,
             yoyo: true
         });
     })

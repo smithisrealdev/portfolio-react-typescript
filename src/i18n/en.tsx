@@ -36,4 +36,12 @@ export const en =  {
     //* skill Page
     'skill.title' : 'S|k|i|l|l|',
 
+     //* Education Page
+     'education.title' : 'E|d|u|c|a|t|i|o|n',
+     'education.graduate' : 'G|r|a|d|u|a|t|e P|r|o|j|e|c|t',
+
+      //* Experiance Page
+      'experiance.title' : 'E|x|p|e|r|i|a|n|c|e',
+      'experiance.graduate' : 'G|r|a|d|u|a|t|e P|r|o|j|e|c|t',
+
 }
