@@ -25,3 +25,12 @@
     bottom: 122px;
     left: 122px;
 }
+
+.rounded-tl-custom {
+    border-top-left-radius: 460px;
+    border-top-right-radius: 200px;
+    border-top-width: 25px;
+    border-top-color: white;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 400px;
+}

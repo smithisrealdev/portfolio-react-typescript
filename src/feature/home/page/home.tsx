@@ -46,7 +46,7 @@ function home() {
        <Blog />
        <Skill />
        <About />
-       <Eduction />
+       {/* <Eduction /> */}
        <Experiance />
     </Box>
   );

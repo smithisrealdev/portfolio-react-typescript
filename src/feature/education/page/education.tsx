@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../../../shared/components/animation/withAnimationHoveText'
 import { FormatMessage } from '../../change_lang/change'
-import University from '../../../images/education-img.jpeg'
+import University from '../../../images/education-img.png'
 import FirebaseImg from '../../../images/firebase-img.png'
 import PlusIcon from '../../../images/plus-icon.png'
 import ArduinoIcon from '../../../images/arduino-icon.webp'
