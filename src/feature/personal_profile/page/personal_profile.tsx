@@ -7,11 +7,15 @@ import { FormatMessage } from '../../change_lang/change'
 import WapProfile from '../components/wapperProfile'
 import { ImagesArray } from '../mock/dataMock'
 export default function personal_profile() {
-    const elementContact = (obj: any) => {
+    interface ContactProps  {
+        link: string,
+        icon: string
+    }
+    const elementContact = ({link,icon}: ContactProps) => {
         return (
             <Grid item xs={4} className='flex h-24' >
-                <a href={obj.link} target="_blank">
-                    <img className='rounded-md cursor-pointer' src={obj.icon} />
+                <a href={link} target="_blank">
+                    <img className='rounded-md cursor-pointer' src={icon} />
                 </a>
             </Grid>
         )
