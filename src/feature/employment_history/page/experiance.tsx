@@ -9,7 +9,11 @@ import TrueLogo from '../../../images/true-logo.webp'
 import CupcodeLogo from '../../../images/cupcode-logo.jpeg'
 import FreelanceLogo from '../../../images/freelance-logo.webp'
 import HiiLogo from '../../../images/hii-logo.webp'
+import PttLogo from '../../../images/ptt-logo.jpeg'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 export default function experiance() {
+    gsap.registerPlugin(ScrollTrigger)
+    // gsap.defaults({ ease: "none", duration: 2 })
     const el = React.useRef() as React.MutableRefObject<HTMLInputElement>;
     const q = gsap.utils.selector(el);
     const onEnter = ({ currentTarget }: React.MouseEvent<HTMLDivElement>) => {
@@ -30,8 +34,29 @@ export default function experiance() {
         <Box ref={el} className="mt-20  w-full">
             <Grid className='bg-main pl-20  '>
                 <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('experiance.title')} />
+                <Grid container spacing={2} className=' flex pl-20 pb-14'>
+                    <Grid item xs={7} className=' flex items-center'>
+                        <Grid className='text-xl font-atma text-white'>
+                            <h1 className='font-semibold'>
+                                FULLSTACK DEVELOPER
+                        </h1>
+                            <h1 className='font-semibold text-orange-600'>
+                                PTT Digital Solutions Company Limited. May 2022 to Present
+                        </h1>
+                            <p className='font-light'>
+                                coming soon
+                        </p>
+                        </Grid>
+                    </Grid>
+                    <Grid item xs={3} className='box1 mt-8'>
+                        <div className='w-52 shadow-2xl bg-white  h-52 resume-custom -z-0 ' />
+                        <div className='boxBg2 -mt-48 ml-4 ' onMouseEnter={onEnter} onMouseLeave={onLeave} >
+                            <img src={PttLogo} className=' h-52 w-52 object-contain' />
+                        </div>
+                    </Grid>
+                </Grid>
                 <Grid container spacing={2} className='flex pl-20 mb-14 '>
-                    <Grid item xs={3} className='mt-8'>
+                    <Grid item xs={3} className='box2 mt-8'>
                         <div className='w-52 shadow-2xl bg-white  h-52 resume-custom -z-0 ' />
                         <div className='boxBg -mt-48 ml-4 ' onMouseEnter={onEnter} onMouseLeave={onLeave} >
                             <img src={TrueLogo} className=' h-52 w-52 object-cover' />
@@ -68,7 +93,7 @@ export default function experiance() {
                         </p>
                         </Grid>
                     </Grid>
-                    <Grid item xs={3} className='mt-8'>
+                    <Grid item xs={3} className='box3 mt-8'>
                         <div className='w-52 shadow-2xl bg-white  h-52 resume-custom -z-0 ' />
                         <div className='boxBg2 -mt-48 ml-4 ' onMouseEnter={onEnter} onMouseLeave={onLeave} >
                             <img src={CupcodeLogo} className=' h-52 w-52 object-contain' />
@@ -76,7 +101,7 @@ export default function experiance() {
                     </Grid>
                 </Grid>
                 <Grid container spacing={2} className='flex pl-20 mb-14'>
-                    <Grid item xs={3} className='mt-8'>
+                    <Grid item xs={3} className='box4 mt-8'>
                         <div className='w-52 shadow-2xl bg-white  h-52 resume-custom -z-0 ' />
                         <div className='boxBg -mt-48 ml-4 ' onMouseEnter={onEnter} onMouseLeave={onLeave} >
                             <img src={FreelanceLogo} className=' h-52 w-52 object-cover' />
@@ -111,7 +136,7 @@ export default function experiance() {
                         </p>
                         </Grid>
                     </Grid>
-                    <Grid item xs={3} className='mt-8'>
+                    <Grid item xs={3} className='box5 mt-8'>
                         <div className='w-52 shadow-2xl bg-white  h-52 resume-custom -z-0 ' />
                         <div className='boxBg2 -mt-48 ml-4 ' onMouseEnter={onEnter} onMouseLeave={onLeave} >
                             <img src={HiiLogo} className=' h-52 w-52 object-contain' />
