@@ -8,12 +8,12 @@ import FirebaseIcon from '../../../images/firebase-icon.png'
 
 export const BackEndList=[
     {
-        url: NodeJsIcon,
-        text: "NodeJs"
-    },
-    {
         url: GolangIcon,
         text: "Golang"
+    },
+    {
+        url: NodeJsIcon,
+        text: "NodeJs"
     },
     {
         url: MariaDBIcon,

@@ -3,7 +3,7 @@ import CupcodeLogo from '../../../images/cupcode-logo.jpeg'
 import FreelanceLogo from '../../../images/freelance-logo.webp'
 import HiiLogo from '../../../images/hii-logo.webp'
 import PttLogo from '../../../images/ptt-logo.png'
-import {FormatMessage} from '../../change_lang/change'
+// import {FormatMessage} from '../../change_lang/change'
 export const jobList = [
     {
         id:1,
@@ -30,7 +30,7 @@ export const jobList = [
         id:4,
         image: FreelanceLogo,
         role: 'FRONTEND DEVELOPER (REACT NATIVE)',
-        location: 'Freelancer Mar 2021 to Jun 2021',
+        location: 'Freelance Mar 2021 to Jun 2021',
         detailJob: "It's an application about teaching and learning and is also an application that will help increase the skills of students in various fields because in this application there are various cross videos to learn. You can also join meetings and open online lessons. (Before ArchieveNex you can enter this app, you must be a member)"
     },
     {

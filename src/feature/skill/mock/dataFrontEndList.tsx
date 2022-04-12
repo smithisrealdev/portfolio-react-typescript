@@ -9,7 +9,7 @@ import MateriaUiImg from '../../../images/materiaUI-icon.avif'
 import TailwindImg from '../../../images/tailwindcss-icon.png'
 import GsapIcon from '../../../images/gsap-icon.png'
 import NativeBaseIcon from '../../../images/nativebase-icon.png'
-
+import BootStrap from '../../../images/bootstrap-icon.png'
 export const FrontEndList=[
     {
         url: ReactImg,
@@ -54,5 +54,9 @@ export const FrontEndList=[
     {
         url: NativeBaseIcon,
         text: "NatveBase"
+    },
+    {
+        url: BootStrap,
+        text: "BootStrap"
     },
 ]

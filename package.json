@@ -10,6 +10,7 @@
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.6.1",
     "@mui/material": "^5.6.0",
     "@mui/styled-engine-sc": "^5.5.2",
     "@testing-library/jest-dom": "^5.14.1",
@@ -19,6 +20,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
+    "@types/react-pdf": "^5.0.9",
     "@types/react-router-hash-link": "^2.4.5",
     "@types/react-scroll": "^1.8.3",
     "@types/styled-components": "^5.1.24",

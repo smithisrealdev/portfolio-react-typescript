@@ -32,6 +32,7 @@ export const en =  {
     'about.story.title.4.substory': 'Higher-Order Components (Hoc), Style-component,Function Component,Arrow Function Component',
     'about.story.title.5': 'Tool',
     'about.story.title.5.substory': 'Jira,Tello,Bitbucket,GitLab,GitHub Services: Jenkins, Kibana, Kong Services',
+    'about.warning': 'You must make an appointment before calling. You can schedule an appointment with a message via LinkedIn',
 
     //* Skill Page
     'skill.title' : 'S|k|i|l|l|',
@@ -66,8 +67,10 @@ export const en =  {
       'joblist.detail.2' : 'I`ve been tasked with overseeing both FE issues developed with ReactJs, Redux based stores, and BE written for development with Golang, and I`ve also been tasked with overseeing the deployment. EnvTest/Production with Jenkins and I can use Kibana to view the logs of each team project repository and I can also use Kong to create an API route service.',
       'joblist.detail.3' : 'It`s developed with active at work that cannot only develop the system but also understand the business and provide sincere service to customers. My experience is developing Websites and Applications using ReactJs and React Native',
       'joblist.detail.4' : 'It`s an application about teaching and learning and is also an application that will help increase the skills of students in various fields because in this application there are various cross videos to learn. You can also join meetings and open online lessons. (Before ArchieveNex you can enter this app, you must be a member)',
-      'joblist.detail.5' : 'Overseeing analyzing and management current state of water in rice fields. and SWAT (soil and water assessment tool) model using for analysis water balance of 25 watershed area in Thailand developer ( Python Postgresql)'
+      'joblist.detail.5' : 'Overseeing analyzing and management current state of water in rice fields. and SWAT (soil and water assessment tool) model using for analysis water balance of 25 watershed area in Thailand developer ( Python Postgresql)',
       
+      //* Project Page
+       'project.title' : 'P|r|o|j|e|c|t'
 
 
 }

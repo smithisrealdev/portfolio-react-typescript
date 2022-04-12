@@ -31,7 +31,7 @@ export const th = {
     'about.story.title.4.substory': 'Higher-Order Components (Hoc), Style-component,Function Component,Arrow Function Component',
     'about.story.title.5': 'เครื่องมือ',
     'about.story.title.5.substory': 'Jira,Tello,Bitbucket,GitLab,GitHub Services: Jenkins, Kibana, Kong Services',
-
+    'about.warning': 'คุณต้องทำการนัดหมายก่อนโทร คุณสามารถกำหนดเวลาการนัดหมายด้วยข้อความผ่าน LinkedIn',
 
     //* Job List
     //? role

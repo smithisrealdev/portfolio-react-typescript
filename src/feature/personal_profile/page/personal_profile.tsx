@@ -6,14 +6,27 @@ import Grid from '@mui/material/Grid';
 import { FormatMessage } from '../../change_lang/change'
 import WapProfile from '../components/wapperProfile'
 import { ImagesArray } from '../mock/dataMock'
+import { gsap } from "gsap";
 export default function personal_profile() {
-    interface ContactProps  {
+    interface ContactProps {
         link: string,
         icon: string
     }
-    const elementContact = ({link,icon}: ContactProps) => {
+    useEffect(() => {
+        gsap.from(".box", {
+            duration: 2,
+            scale: 0.5,
+            opacity: 0,
+            delay: 0.5,
+            stagger: 0.2,
+            ease: "elastic",
+            force3D: true
+        });
+    }, [])
+
+    const elementContact = ({ link, icon }: ContactProps) => {
         return (
-            <Grid item xs={4} className='flex h-24' >
+            <Grid item xs={4} className='box flex h-24' >
                 <a href={link} target="_blank">
                     <img className='rounded-md cursor-pointer' src={icon} />
                 </a>
