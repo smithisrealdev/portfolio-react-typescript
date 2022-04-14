@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Eduction from '../../education/page/education';
 import Experiance from '../../employment_history/page/experiance';
 import Project  from '../../project/page/project';
+import Contact  from '../../contact/page/contact';
 function home() {
 
   return (
@@ -16,6 +17,7 @@ function home() {
        {/* <Eduction /> */}
        <Experiance />
        <Project />
+       <Contact />
     </Box>
   );
 }

@@ -114,7 +114,6 @@ function contact() {
                             </GoogleMap>
                         ) : <></>}
                     </Grid>
-
                 </Grid>
             </Box>
         </Container>

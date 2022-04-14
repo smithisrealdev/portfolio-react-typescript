@@ -66,7 +66,7 @@ export default function project() {
     return (
         <Container maxWidth="xl" className="pb-20">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('project.title')} />
-            <Grid item xs={12} className='grid grid-cols-3 gap-10 pl-6' >
+            <Grid item xs={12} className='grid grid-cols-3 gap-10' >
                 {dataList.map((items) => {
                     return renderCardProject(items)
                 })}
