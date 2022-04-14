@@ -7,9 +7,10 @@ import PlusIcon from '../../../images/plus-icon.png'
 import ArduinoIcon from '../../../images/arduino-icon.webp'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
 export default function education() {
     return (
-        <Box className="mt-20 bg-main pl-20 h-full">
+        <Container maxWidth="xl" className="bg-main pl-20 h-full">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('education.title')} />
             <h1 className='text-white text-xl font-semibold pb-4 pl-8'>
                 History
@@ -71,6 +72,6 @@ export default function education() {
 
             </div>
 
-        </Box>
+        </Container>
     )
 }

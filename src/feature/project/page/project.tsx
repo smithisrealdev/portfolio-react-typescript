@@ -9,7 +9,7 @@ import Grid from '@mui/material/Grid';
 import { dataList } from '../mock/dataMock';
 import { gsap } from "gsap";
 import CardActions from '@mui/material/CardActions';
-// import {Scro}
+import Container from '@mui/material/Container';
 export default function project() {
     const onEnter = ({ currentTarget }: React.MouseEvent<HTMLDivElement>) => {
         gsap.fromTo(currentTarget,
@@ -34,7 +34,7 @@ export default function project() {
     }
     const renderCardProject = ({ url, title, detail, link,toolList }: CardProps) => {
         return (
-            <Card sx={{ maxWidth: 325 }} className='bg-green-500'>
+            <Card sx={{ maxWidth: 325 }}>
                 <a href={link ? link : undefined} target="_blank">
                     <CardMedia
                         onMouseEnter={onEnter}
@@ -50,7 +50,7 @@ export default function project() {
                             {detail}
                         </p>
                     </CardContent>
-                    <CardActions disableSpacing className='text-white font-atma border-t-2 bg-indigo-500'>
+                    <CardActions disableSpacing className='text-white font-atma border-t-2 bg-indigo-400'>
                        <Grid item xs={12} className='flex flex-1 gap-2'>
                            {toolList.map((item)=> {
                                return (
@@ -64,13 +64,13 @@ export default function project() {
         )
     }
     return (
-        <Box className="pl-28 pb-20">
+        <Container maxWidth="xl" className="pb-20">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('project.title')} />
-            <Grid item xs={12} className='grid grid-cols-3 pl-16' >
+            <Grid item xs={12} className='grid grid-cols-3 gap-10 pl-6' >
                 {dataList.map((items) => {
                     return renderCardProject(items)
                 })}
             </Grid>
-        </Box>
+        </Container>
     )
 }
