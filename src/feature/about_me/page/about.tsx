@@ -10,8 +10,8 @@ export default function about() {
         <Container maxWidth="xl" className="pl-28 mb-12 bg-main pb-12">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('about.title')} />
             <Grid container spacing={2} className='flex pl-4'>
-                <Grid item xs={8}>
-                    <Grid className='text-xl font-light font-atma text-white'>
+                <Grid item xs={12}>
+                    <Grid item xs={12} className='text-xl font-light font-atma text-white'>
                         {FormatMessage('about.story.1')} <b className='font-semibold'>{FormatMessage('about.story.2')}</b> {FormatMessage('about.story.3')} <b className='font-semibold'>{FormatMessage('about.story.4')}</b> {FormatMessage('about.story.5')}
                         <Grid className='flex pt-12 gap-8' >
                             <ResumeBtn />
