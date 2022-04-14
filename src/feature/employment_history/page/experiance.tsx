@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { jobList } from '../mock/dataMock'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import BgWhite from '../../../images/bg-white.webp'
 import Container from '@mui/material/Container';
 export default function experiance() {
     gsap.registerPlugin(ScrollTrigger)
@@ -40,15 +41,16 @@ export default function experiance() {
     }
     const renderJobCard = ({ id, image, role, location, detailJob }: JobProps) => {
         return (
-
-            <Grid container spacing={2} className='flex items-center justify-center pl-16 pr-40'>
-                {/* <Container maxWidth="2xl"> */}
+            <Container maxWidth="xl" >
+                <Grid container spacing={2} className='flex items-center justify-center'>
                     {id % 2 === 0 && (
-                        <Grid item xs={3} className=' mt-8'>
-                            <div className='w-52 shadow-2xl bg-white  h-52 resume-custom -z-0 ' />
-                            <div className='-mt-48 ml-4 w-52 bg-red-500' onMouseEnter={onEnter} onMouseLeave={onLeave} >
-                                <img src={image} className='h-52 object-cover' />
-                            </div>
+                        <Grid item xs={3} className='mt-8'>
+                            <Grid className=' resume-custom -z-0 ' >
+                                <img src={BgWhite} className='h-52 w-52 object-cover' />
+                            </Grid>
+                            <Grid className='-mt-48 ml-4' onMouseEnter={onEnter} onMouseLeave={onLeave} >
+                                <img src={image} className='h-52 w-52 object-cover' />
+                            </Grid>
                         </Grid>
                     )
                     }
@@ -67,28 +69,29 @@ export default function experiance() {
                     </Grid>
                     {id % 2 === 1 && (
                         <Grid item xs={3} className='box1 mt-8'>
-                            <div className='w-52 shadow-2xl bg-white  h-52 resume-custom -z-0 ' />
-                            <div className='-mt-48 ml-4 w-52 ' onMouseEnter={onEnter} onMouseLeave={onLeave} >
-                                <img src={image} className=' h-52 object-cover' />
-                            </div>
+                            <Grid className=' resume-custom -z-0 ' >
+                                <img src={BgWhite} className='h-52 w-52 object-cover' />
+                            </Grid>
+                            <Grid className='-mt-48 ml-4 ' onMouseEnter={onEnter} onMouseLeave={onLeave} >
+                                <img src={image} className=' h-52 w-54 object-cover' />
+                            </Grid>
                         </Grid>
                     )
                     }
-                {/* </Container> */}
-            </Grid>
+                </Grid>
+
+            </Container>
 
         )
     }
     return (
-        <Box className="pl-28 mt-20 mb-12 bg-main pb-12">
-            {/* <Grid className='bg-main pl-20  '> */}
+        <Container maxWidth="xl" className="pl-28 mb-12 bg-main pb-12">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('experiance.title')} />
             {jobList.map((items) => {
                 return (
                     renderJobCard(items)
                 )
             })}
-            {/* </Grid> */}
-        </Box>
+        </Container>
     )
 }
