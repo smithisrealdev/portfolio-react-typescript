@@ -70,7 +70,11 @@ export const en =  {
       'joblist.detail.5' : 'Overseeing analyzing and management current state of water in rice fields. and SWAT (soil and water assessment tool) model using for analysis water balance of 25 watershed area in Thailand developer ( Python Postgresql)',
       
       //* Project Page
-       'project.title' : 'P|r|o|j|e|c|t'
+       'project.title' : 'P|r|o|j|e|c|t',
+
+       //* Contact Page
+       'contact.title' : 'C|o|n|t|a|c|t',
+       'contact.send' : 'Send Message!'
 
 
 }

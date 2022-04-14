@@ -37,7 +37,7 @@ export default function personal_profile() {
     return (
         <Container maxWidth="xl" id='blog' className='col-span-2 grid-cols-2 pb-20 items-center w-full pl-32 justify-items-start'>
             <Suspense fallback={<></>} >
-                <Grid container spacing={2} className='flex pt-16'>
+                <Grid container spacing={2} className='flex'>
                     <Grid item xs={6}>
                         <Tilte noUseLeave={true} noUseEnter={false} text="H|e|y I|'|m" />
                         <Tilte noUseLeave={true} noUseEnter={false} text="A|p|i|c|h|e|t N|u|a|m|t|u|n|" />
