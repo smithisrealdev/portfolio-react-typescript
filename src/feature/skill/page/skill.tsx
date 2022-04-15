@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 export default function skill() {
     return (
-        <Container maxWidth="xl" className="pl-28 bg-main pb-12">
+        <Container maxWidth="xl" className="pl-28 bg-main pb-24">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('skill.title')} />
             <Grid container spacing={2} className='flex justify-between'>
                 <Grid item xs={4} className=' border-r-2'>

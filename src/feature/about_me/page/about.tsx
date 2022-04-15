@@ -46,16 +46,13 @@ export default function about() {
                             </Grid>
                             <Grid item xs={4}>
                                 <Grid className='ml-4 resume-custom -z-0 ' >
-                                    <div className=' rounded-md h-72 w-72 border-4' />
+                                    <div className=' rounded-md xl:w-72 xl:h-72 md:w-52 md:h-52 border-4' />
                                 </Grid>
                                 <Grid className='-mt-78' onMouseEnter={onEnter} onMouseLeave={onLeave}>
                                     <img className='box1 object-cover rounded-md xl:w-72 xl:h-72 md:w-52 md:h-52' src={ProfileBg} />
                                 </Grid>
                             </Grid>
-
                         </Grid>
-
-
                     </Grid>
                 </Grid>
             </Grid>

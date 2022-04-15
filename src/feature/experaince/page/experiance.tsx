@@ -46,10 +46,10 @@ export default function experiance() {
                     {id % 2 === 0 && (
                         <Grid item xs={3} className='mt-8'>
                             <Grid className=' resume-custom -z-0 ' >
-                                <img src={BgWhite} className='h-52 w-52 object-cover' />
+                            <div className='h-52 w-52 rounded-md bg-white' />
                             </Grid>
                             <Grid className='-mt-48 ml-4' onMouseEnter={onEnter} onMouseLeave={onLeave} >
-                                <img src={image} className='h-52 w-52 object-cover' />
+                                <img src={image} className='h-52 w-52 object-cover rounded-md ' />
                             </Grid>
                         </Grid>
                     )
@@ -70,10 +70,10 @@ export default function experiance() {
                     {id % 2 === 1 && (
                         <Grid item xs={3} className='box1 mt-8'>
                             <Grid className=' resume-custom -z-0 ' >
-                                <img src={BgWhite} className='h-52 w-52 object-cover' />
+                                <div className='h-52 w-52 rounded-md bg-white' />
                             </Grid>
                             <Grid className='-mt-48 ml-4 ' onMouseEnter={onEnter} onMouseLeave={onLeave} >
-                                <img src={image} className=' h-52 w-54 object-cover' />
+                                <img src={image} className=' h-52 w-54 object-cover rounded-md' />
                             </Grid>
                         </Grid>
                     )

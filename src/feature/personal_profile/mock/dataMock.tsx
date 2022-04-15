@@ -3,9 +3,9 @@ import LinkedINIcon from '../../../images/linkedIN-icon.png'
 import JobDBIcon from '../../../images/jobDB-icon.png'
 import LineIcon from '../../../images/line-icon.png'
 import CallIcon from '../../../images/call-icon.png'
-import FaecbookIcon from '../../../images/facebook-icon.webp'
+import FaecbookIcon from '../../../images/facebook-icon.png'
 import SlackIcon from '../../../images/Slack-Icon.jpeg'
-import IgIcon from '../../../images/ig-icon.jpeg'
+import IgIcon from '../../../images/ig-icon.png'
 import GithubIcon from '../../../images/GitHub-icon.png'
 
 export const ImagesArray = [
@@ -29,14 +29,14 @@ export const ImagesArray = [
         //     link: '0839828552',
         //     icon: CallIcon
         // },
-        // {
-        //     link: 'https://www.facebook.com/apichat.naumtoon/',
-        //     icon: FaecbookIcon
-        // },
-        // {
-        //     link: 'https://www.instagram.com/smithisreal_l/',
-        //     icon: IgIcon
-        // },
+        {
+            link: 'https://www.facebook.com/apichat.naumtoon/',
+            icon: FaecbookIcon
+        },
+        {
+            link: 'https://www.instagram.com/smithisreal_l/',
+            icon: IgIcon
+        },
     
         // {
         //     link: '',

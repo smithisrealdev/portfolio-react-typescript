@@ -24,11 +24,19 @@ export default function personal_profile() {
         });
     }, [])
 
+    const onEnter = ({ currentTarget }: React.MouseEvent<HTMLDivElement>) => {
+        gsap.to(currentTarget, {
+            rotation: "+=360",
+            ease: "elastic",
+            force3D: true
+        });
+    };
+
     const elementContact = ({ link, icon }: ContactProps) => {
         return (
-            <Grid item xs={4} className='box flex h-24 h-18' >
+            <Grid item xs={4} className='box flex w-full h-full' onMouseEnter={onEnter} >
                 <a href={link} target="_blank">
-                    <img className='rounded-2xl cursor-pointer' src={icon} />
+                    <img className='object-cover  cursor-pointer' src={icon} />
                 </a>
             </Grid>
         )
@@ -49,7 +57,7 @@ export default function personal_profile() {
                                 {FormatMessage("main.subTitle.2")}
                             </p>
                         </Grid>
-                        <Grid item xs={3} className='flex gap-5 pt-8'>
+                        <Grid item xs={5} className='flex gap-5 pt-8'>
                             {ImagesArray.map((items) => {
                                 return elementContact(items)
                             })}
