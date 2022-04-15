@@ -21,10 +21,10 @@ export const ImagesArray = [
         //     link: 'https://th.jobsdb.com/th/profile/me',
         //     icon: JobDBIcon
         // },
-        // {
-        //     link: 'Oatporn1123',
-        //     icon: LineIcon
-        // },
+        {
+            link: 'https://line.me/ti/p/_KawTxTHdF',
+            icon: LineIcon
+        },
         // {
         //     link: '0839828552',
         //     icon: CallIcon
@@ -38,10 +38,10 @@ export const ImagesArray = [
         //     icon: IgIcon
         // },
     
-        {
-            link: '',
-            icon: SlackIcon
-        },
+        // {
+        //     link: '',
+        //     icon: SlackIcon
+        // },
 
         {
             link: 'https://github.com/smithisreal',

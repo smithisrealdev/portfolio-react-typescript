@@ -15,8 +15,6 @@ export default function about() {
                         {FormatMessage('about.story.1')} <b className='font-semibold'>{FormatMessage('about.story.2')}</b> {FormatMessage('about.story.3')} <b className='font-semibold'>{FormatMessage('about.story.4')}</b> {FormatMessage('about.story.5')}
                         <Grid className='flex pt-12 gap-8' >
                             <ResumeBtn />
-                            {/* <Alert severity="warning">This is a warning alert — check it out!</Alert> */}
-                            
                         </Grid>
                     </Grid>
                 </Grid>
