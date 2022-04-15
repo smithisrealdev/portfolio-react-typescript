@@ -50,7 +50,7 @@ export default function project() {
                             {detail}
                         </p>
                     </CardContent>
-                    <CardActions disableSpacing className='text-white font-atma border-t-2 bg-indigo-400'>
+                    <CardActions disableSpacing className='text-white font-atma border-t-2 bg-orange-50'>
                        <Grid item xs={12} className='flex flex-1 gap-2'>
                            {toolList.map((item)=> {
                                return (

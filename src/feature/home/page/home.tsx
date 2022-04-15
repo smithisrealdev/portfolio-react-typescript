@@ -4,13 +4,13 @@ import About from '../../about_me/page/about'
 import Skill from '../../skill/page/skill'
 import Box from '@mui/material/Box';
 import Eduction from '../../education/page/education';
-import Experiance from '../../employment_history/page/experiance';
+import Experiance from '../../experaince/page/experiance';
 import Project  from '../../project/page/project';
 import Contact  from '../../contact/page/contact';
 function home() {
 
   return (
-    <Box  className='p-12 bg-main'>
+    <Box  className='p-28 bg-main'>
        <Blog />
        <About />
        <Skill />

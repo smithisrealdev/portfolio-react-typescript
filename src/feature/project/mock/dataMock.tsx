@@ -13,6 +13,8 @@ import OracleIcon from '../../../images/oracle-icon.jpeg'
 import MariaDBIcon from '../../../images/mariaDB-icon.jpeg'
 import MobXIcon from '../../../images/mobX-icon.png'
 import BootStrapIcon from '../../../images/bootstrap-icon.png'
+import NextJsIcon from '../../../images/nextJs-logo.png'
+
 export const dataList = [
     {
         id: 1,
@@ -22,28 +24,28 @@ export const dataList = [
         link: '',
         toolList: [
             {
-                id:1,
-                img:RaactIcon,
+                id: 1,
+                img: RaactIcon,
             },
             {
-                id:2,
-                img:ReduxIcon,
+                id: 2,
+                img: ReduxIcon,
             },
             {
-                id:3,
-                img:MateriaUI,
+                id: 3,
+                img: MateriaUI,
             },
             {
-                id:4,
-                img:GolangIcon,
+                id: 4,
+                img: GolangIcon,
             },
             {
-                id:5,
-                img:MariaDBIcon,
+                id: 5,
+                img: MariaDBIcon,
             },
             {
-                id:6,
-                img:OracleIcon,
+                id: 6,
+                img: OracleIcon,
             },
         ]
     },
@@ -55,16 +57,16 @@ export const dataList = [
         link: 'https://apps.apple.com/th/app/achievenex/id1562381552',
         toolList: [
             {
-                id:1,
-                img:ReactNativeIcon,
+                id: 1,
+                img: ReactNativeIcon,
             },
             {
-                id:2,
-                img:ReduxIcon,
+                id: 2,
+                img: ReduxIcon,
             },
             {
-                id:3,
-                img:NaviteBaseIcon,
+                id: 3,
+                img: NaviteBaseIcon,
             },
         ]
     },
@@ -76,19 +78,49 @@ export const dataList = [
         link: 'https://www.checkqdi.com/',
         toolList: [
             {
-                id:1,
-                img:RaactIcon,
+                id: 1,
+                img: RaactIcon,
             },
             {
-                id:2,
-                img:MobXIcon,
+                id: 2,
+                img: MobXIcon,
             },
             {
-                id:3,
-                img:BootStrapIcon,
+                id: 3,
+                img: NextJsIcon,
+            },
+            {
+                id: 4,
+                img: BootStrapIcon,
             },
         ]
     },
-    
+
+    // {
+    //     id: 4,
+    //     url: CheckQdiLogo,
+    //     title: 'CheckQdi (Caninnovation)',
+    //     detail: "CheckQdi is a dedicated space for FREELANCE DIRECTORS to showcase their portfolios. With just few clicks, you'll be able to get new projects straight to your indox",
+    //     link: 'https://www.checkqdi.com/',
+    //     toolList: [
+    //         {
+    //             id: 1,
+    //             img: RaactIcon,
+    //         },
+    //         {
+    //             id: 2,
+    //             img: MobXIcon,
+    //         },
+    //         {
+    //             id: 3,
+    //             img: NextJsIcon,
+    //         },
+    //         {
+    //             id: 4,
+    //             img: BootStrapIcon,
+    //         },
+    //     ]
+    // },
+
 
 ]

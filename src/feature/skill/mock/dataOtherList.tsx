@@ -30,22 +30,22 @@ export const OtherList=[
         url: JiraIcon,
         text: "Jira"
     },
-    {
-        url: KibanaIcon,
-        text: "Kibana"
-    },
+    // {
+    //     url: KibanaIcon,
+    //     text: "Kibana"
+    // },
     {
         url: PythonIcon,
         text: "Python"
     },
-    {
-        url: JavaIcon,
-        text: "Java"
-    },
-    {
-        url: PostgreSqlIcon,
-        text: "PostgreSQL"
-    },
+    // {
+    //     url: JavaIcon,
+    //     text: "Java"
+    // },
+    // {
+    //     url: PostgreSqlIcon,
+    //     text: "PostgreSQL"
+    // },
     {
         url: NetlifyIcon,
         text: "Netlify"

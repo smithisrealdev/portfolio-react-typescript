@@ -87,10 +87,10 @@ function contact() {
                             </Grid>
                         </Box>
                         <Box className='pt-2 flex justify-end'>
-                            <div className='z-20 bg-yellow-500' ref={el}>
-                                <div className=' w-36 shadow-2xl bg-indigo-100  h-12 resume-custom -z-0 ' />
-                                <div className='boxBg -mt-12 w-36 bg-indigo-400 h-12 ' />
-                                <div onMouseEnter={onEnter} onMouseLeave={onLeave} className='box2 -mt-12 w-36 bg-indigo-600 h-12 items-center justify-center flex cursor-pointer ' >
+                            <div className='z-20 ' ref={el}>
+                                <div className=' w-36 shadow-2xl bg-orange-100  h-12 resume-custom -z-0 ' />
+                                <div className='boxBg -mt-12 w-36 bg-orange-400 h-12 ' />
+                                <div onMouseEnter={onEnter} onMouseLeave={onLeave} className='box2 -mt-12 w-36 bg-resume h-12 items-center justify-center flex cursor-pointer ' >
                                     {/* <Link href={ResumePDF} download underline="none"> */}
                                     <h1 className='font-atma text-white font-medium'>
                                         {FormatMessage('contact.send')}

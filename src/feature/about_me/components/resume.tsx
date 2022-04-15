@@ -2,7 +2,7 @@ import React from 'react'
 import { gsap } from "gsap";
 import Link from '@mui/material/Link';
 import { FormatMessage } from '../../change_lang/change'
-import ResumePDF from '../../../pdf/ResumeApichet.pdf';
+import ResumePDF from '../../../assets/ResumeApichet.pdf';
 import Alert from '@mui/material/Alert';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
@@ -36,9 +36,9 @@ export default function resume() {
     return (
         <React.Fragment>
             <div className=' z-20' ref={el}>
-                <div className=' w-24 shadow-2xl bg-indigo-100  h-12 resume-custom -z-0 ' />
-                <div className='boxBg -mt-12 w-24 bg-indigo-400 h-12 ' />
-                <div onMouseEnter={onEnter} onClick={()=> setOpen(true) } onMouseLeave={onLeave} className='box2 -mt-12 w-24 bg-indigo-500 h-12 items-center justify-center flex cursor-pointer ' >
+                <div className=' w-24 shadow-2xl bg-orange-100  h-12 resume-custom -z-0 ' />
+                <div className='boxBg -mt-12 w-24 bg-orange-400 h-12 ' />
+                <div onMouseEnter={onEnter} onClick={()=> setOpen(true) } onMouseLeave={onLeave} className='box2 -mt-12 w-24 bg-resume h-12 items-center justify-center flex cursor-pointer ' >
                     <Link href={ResumePDF} download underline="none">
                         <h1 className='font-atma text-white font-medium'>
                             {FormatMessage('main.resume')}

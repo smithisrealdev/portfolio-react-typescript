@@ -12,19 +12,27 @@
 }
 
 .text-color-custom {
-    color: #6466F1;
+    color: #F44336;
 }
 
 .bg-main {
     background-color: #151b29 ;
 }
 .bg-resume {
-    background-color: #D61320;
+    background-color: #F44336;
 }
 .resume-custom {
     bottom: 122px;
     left: 122px;
 }
+
+.-mt-76{
+    margin-top:  -300px 
+}	
+.-mt-78{
+    margin-top:  -306px 
+}	
+
 
 .rounded-tl-custom {
     border-top-left-radius: 460px;

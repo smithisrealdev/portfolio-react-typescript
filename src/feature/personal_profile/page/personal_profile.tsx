@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 // import SocialMedia from '../container/withAnimationSocialMedia'
 import { FormatMessage } from '../../change_lang/change'
-import WapProfile from '../components/wapperProfile'
 import { ImagesArray } from '../mock/dataMock'
 import { gsap } from "gsap";
 import Container from '@mui/material/Container';
@@ -27,7 +26,7 @@ export default function personal_profile() {
 
     const elementContact = ({ link, icon }: ContactProps) => {
         return (
-            <Grid item xs={4} className='box flex h-24' >
+            <Grid item xs={4} className='box flex h-24 h-18' >
                 <a href={link} target="_blank">
                     <img className='rounded-2xl cursor-pointer' src={icon} />
                 </a>
@@ -37,12 +36,12 @@ export default function personal_profile() {
     return (
         <Container maxWidth="xl" id='blog' className='col-span-2 grid-cols-2 pb-20 items-center w-full pl-32 justify-items-start'>
             <Suspense fallback={<></>} >
-                <Grid container spacing={2} className='flex'>
-                    <Grid item xs={6}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} className='justify-center items-center'>
                         <Tilte noUseLeave={true} noUseEnter={false} text="H|e|y I|'|m" />
                         <Tilte noUseLeave={true} noUseEnter={false} text="A|p|i|c|h|e|t N|u|a|m|t|u|n|" />
                         <Tilte noUseLeave={true} noUseEnter={false} text="F|u|l|l|S|t|a|c|k D|e|v|e|l|o|p|e|r" />
-                        <Grid item xs={6} className='z-20 mb-8'>
+                        <Grid item xs={12} className='z-20 mb-8'>
                             <p className='mt-6 text-xl font-light text-white font-atma'>
                                 {FormatMessage("main.subTitle.1")}
                             </p>
@@ -50,13 +49,12 @@ export default function personal_profile() {
                                 {FormatMessage("main.subTitle.2")}
                             </p>
                         </Grid>
-                        <Grid item xs={5} className='flex gap-5 pt-8'>
+                        <Grid item xs={3} className='flex gap-5 pt-8'>
                             {ImagesArray.map((items) => {
                                 return elementContact(items)
                             })}
                         </Grid>
                     </Grid>
-                    <WapProfile />
                 </Grid>
             </Suspense>
         </Container>

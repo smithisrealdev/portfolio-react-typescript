@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutMe from '../src/feature/about_me/page/about'
-import Experiance from '../src/feature/employment_history/page/experiance'
+import Experiance from './feature/experaince/page/experiance'
 import Education from '../src/feature/education/page/education'
 import Skill from '../src/feature/skill/page/skill'
 import Home from '../src/feature/home/page/home'

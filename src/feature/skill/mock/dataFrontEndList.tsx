@@ -9,11 +9,16 @@ import MateriaUiImg from '../../../images/materiaUI-icon.avif'
 import TailwindImg from '../../../images/tailwindcss-icon.png'
 import GsapIcon from '../../../images/gsap-icon.png'
 import NativeBaseIcon from '../../../images/nativebase-icon.png'
+import NextJs from '../../../images/nextJs-logo.png'
 import BootStrap from '../../../images/bootstrap-icon.png'
 export const FrontEndList=[
     {
         url: ReactImg,
         text: "ReactJs"
+    },
+    {
+        url: NextJs,
+        text: "NextJs"
     },
     {
         url: ReactNativeIcon,
@@ -51,10 +56,10 @@ export const FrontEndList=[
         url: GsapIcon,
         text: "Gsap"
     },
-    {
-        url: NativeBaseIcon,
-        text: "NatveBase"
-    },
+    // {
+    //     url: NativeBaseIcon,
+    //     text: "NatveBase"
+    // },
     {
         url: BootStrap,
         text: "BootStrap"
