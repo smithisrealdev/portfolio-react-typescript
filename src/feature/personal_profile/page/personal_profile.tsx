@@ -42,7 +42,7 @@ export default function personal_profile() {
         )
     }
     return (
-        <Container maxWidth="xl" id='blog' className='col-span-2 grid-cols-2 pb-20 items-center w-full pl-32 justify-items-start'>
+        <Container maxWidth="xl" id='blog' className='col-span-2 grid-cols-2 pb-20 sm:pb-10 items-center w-full pl-32 justify-items-start'>
             <Suspense fallback={<></>} >
                 <Grid container spacing={2}>
                     <Grid item xs={12} className='justify-center items-center'>
@@ -50,14 +50,14 @@ export default function personal_profile() {
                         <Tilte noUseLeave={true} noUseEnter={false} text="A|p|i|c|h|e|t N|u|a|m|t|u|n|" />
                         <Tilte noUseLeave={true} noUseEnter={false} text="F|u|l|l|S|t|a|c|k D|e|v|e|l|o|p|e|r" />
                         <Grid item xs={12} className='z-20 mb-8'>
-                            <p className='mt-6 text-xl font-light text-white font-atma'>
+                            <p className='mt-6 xl:text-xl sm:text-sm font-light text-white font-atma'>
                                 {FormatMessage("main.subTitle.1")}
                             </p>
-                            <p className='text-xl font-light text-white font-atma'>
+                            <p className='xl:text-xl font-light text-white font-atma'>
                                 {FormatMessage("main.subTitle.2")}
                             </p>
                         </Grid>
-                        <Grid item xs={5} className='flex gap-5 pt-8'>
+                        <Grid item xs={8} className='flex gap-5 pt-8'>
                             {ImagesArray.map((items) => {
                                 return elementContact(items)
                             })}

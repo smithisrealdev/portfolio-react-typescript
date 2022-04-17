@@ -10,7 +10,7 @@ import Contact  from '../../contact/page/contact';
 function home() {
 
   return (
-    <Box  className='p-28 bg-main'>
+    <Box  className='xl:p-28 lg:p-24 md:-16 sm:p-4 bg-main'>
        <Blog />
        <About />
        <Skill />

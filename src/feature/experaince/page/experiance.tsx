@@ -85,7 +85,7 @@ export default function experiance() {
         )
     }
     return (
-        <Container maxWidth="xl" className="pl-28 mb-12 bg-main pb-12">
+        <Container maxWidth="xl" className="pl-28 xl:mb-12 bg-main pb-12">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('experiance.title')} />
             {jobList.map((items) => {
                 return (

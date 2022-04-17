@@ -116,7 +116,7 @@ const header = () => {
                                         </Box>
                                     ))}
                                 </Box>
-                                <Box sx={{ flexGrow: 0 }}>
+                                {/* <Box sx={{ flexGrow: 0 }}>
                                     <Grid className='flex items-center justify-center'>
                                         <SwitchChangeLang />
                                         <SwitchDarkMode />
@@ -124,7 +124,7 @@ const header = () => {
                                             {FormatMessage('header.version')}
                                         </h1>
                                     </Grid>
-                                </Box>
+                                </Box> */}
                             </Grid>
                         </Container>
                     </Box>

@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useState, useEffect } from 'react'
 import Title from '../../../shared/components/animation/withAnimationHoveText'
 import { FormatMessage } from '../../change_lang/change';
 import ResumeBtn from '../../about_me/components/resume';
@@ -25,33 +25,49 @@ export default function about() {
             force3D: true
         });
     };
-    // const onEnter = () => {
-    //     gsap.from('.box1', {
-    //         x: 15,
-    //         y: 17,
-    //     });
-    // };
+    useEffect(() => {
+        gsap.fromTo('.box1', {
+            x: 16,
+            y: 18,
+            duration: 1,
+            ease: "elastic",
+            force3D: true
+        }, {
+            x: 0,
+            y: 0,
+            duration: 1,
+            ease: "elastic",
+            force3D: true
+        });
+    }, [])
     return (
-        <Container maxWidth="xl" className="pl-28 mb-12 bg-main pb-12">
+        <Container maxWidth="xl" className="pl-28 xl:mb-12 bg-main pb-12">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('about.title')} />
             <Grid container spacing={2} className='flex pl-4'>
                 <Grid item xs={12}>
-                    <Grid item xs={12} className='text-xl font-light font-atma text-white'>
-                        <Grid item xs={12} className='flex gap-16'>
-                            <Grid item xs={10} className='mr-40'>
+                    <Grid item xs={12} className='xl:text-xl sm:text-sm font-light font-atma text-white'>
+                        <Grid item xs={12} className='xl:flex gap-16 '>
+                            <Grid item xs sm={12} className='xl:mr-40'>
                                 {FormatMessage('about.story.1')} <b className='font-semibold'>{FormatMessage('about.story.2')}</b> {FormatMessage('about.story.3')} <b className='font-semibold'>{FormatMessage('about.story.4')}</b> {FormatMessage('about.story.5')}
-                                <Grid className='flex pt-12 gap-8' >
+                                {/* <Grid className='flex pt-12 sm:pt-6 gap-8 sm:hidden' >
                                     <ResumeBtn />
-                                </Grid>
+                                </Grid> */}
                             </Grid>
-                            <Grid item xs={4}>
-                                <Grid className='ml-4 resume-custom -z-0 ' >
-                                    <div className=' rounded-md xl:w-72 xl:h-72 md:w-52 md:h-52 border-4' />
+                            <div>
+                                <Grid item xs sm={12}>
+                                    <div className='flex justify-center items-center sm:w-full sm:pt-14 lg:pt-16'>
+                                        <div>
+                                            <Grid className='ml-4 resume-custom -z-0 ' >
+                                                <div className='-mt-4 rounded-md xl:w-72 xl:h-72 sm:h-36 sm:w-36 md:h-40 md:w-40 lg:h-56 lg:w-56 border-4 sm:border-2' />
+                                            </Grid>
+                                            <Grid className='sm:-mt-40 lg:-mt-60 -mt-78' onMouseEnter={onEnter} onMouseLeave={onLeave}>
+                                                <img className='box1 object-cover rounded-md xl:w-72 xl:h-72 sm:h-36 sm:w-36 md:h-40 md:w-40 lg:h-56 lg:w-56' src={ProfileBg} />
+                                            </Grid>
+                                        </div>
+                                    </div>
                                 </Grid>
-                                <Grid className='-mt-78' onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                                    <img className='box1 object-cover rounded-md xl:w-72 xl:h-72 md:w-52 md:h-52' src={ProfileBg} />
-                                </Grid>
-                            </Grid>
+                            </div>
+
                         </Grid>
                     </Grid>
                 </Grid>
