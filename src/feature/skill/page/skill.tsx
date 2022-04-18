@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React, { useRef } from 'react';
 import Title from '../../../shared/components/animation/withAnimationHoveText';
 import Box from '@mui/material/Box';
 import { FrontEndList } from '../mock/dataFrontEndList';
@@ -11,6 +11,22 @@ import Grid from '@mui/material/Grid';
 import { SnapList, SnapItem } from 'react-snaplist-carousel';
 import Card from '@mui/material/Card';
 import { CardActionArea } from '@mui/material';
+import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import { styled } from '@mui/material/styles';
+import ReactIcon from '../../../images/React.webp'
+import GolangIcon from '../../../images/Go-Logo.png'
+const BorderLinearProgress = styled(LinearProgress)(({ theme }: any) => ({
+    height: 15,
+    borderRadius: 5,
+    [`&.${linearProgressClasses.colorPrimary}`]: {
+        backgroundColor: '#ffffff',
+    },
+    [`& .${linearProgressClasses.bar}`]: {
+        borderRadius: 5,
+        backgroundColor: '#F44336',
+    },
+}));
+
 interface TypeProps {
     url: string,
     text: string
@@ -19,14 +35,14 @@ export default function skill() {
     const snapList = useRef(null);
     const _renderItem = ({ url, text }: TypeProps) => (
         <SnapItem snapAlign="start">
-            <Card  className='mt-4 xl:h-28 xl:w-24 md:h-24 md:w-20 ' >
+            <Card className='mt-4 xl:h-28 xl:w-24 md:h-24 md:w-20 sm:h-22 sm:w-18 ' >
                 <CardActionArea>
                     <img
-                        className=' object-cover w-full xl:h-20 lg:h-20 md:h-16 sm:h-14 bg-main'
+                        className=' object-cover w-full xl:h-20 lg:h-20 md:h-16 sm:h-18 bg-main'
                         src={url}
                     />
                     <Box className='flex w-full items-center justify-center' >
-                        <p className='xl:text-lg md:text-md font-atma font-medium' >
+                        <p className='xl:text-lg md:text-base sm:text-sm font-medium' >
                             {text}
                         </p>
                     </Box>
@@ -35,39 +51,65 @@ export default function skill() {
         </SnapItem>
     );
     return (
-        <Container maxWidth="xl" className="pl-28 bg-main pb-24">
+        <Container maxWidth="xl" className="pl-28 bg-main pb-24 font-atma text-white">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('skill.title')} />
-            <Grid container spacing={2} sx={{ display: { lg: 'flex', md: 'none', sm: 'none',xs:'none' } }}>
-                <Grid item xs={4} className='border-r-2'>
-                    <Grid className='justify-center flex'>
-                        <h1 className='text-white font-atma font-semibold'>
-                            Front End
+            <Grid container spacing={2} >
+                <div className='lg:flex md:flex sm:hidden xl:flex'>
+                    <Grid item xs={4} className='border-r-2 '>
+                        <Grid className='justify-center flex'>
+                            <h1 className='font-semibold'>
+                                Front End
                         </h1>
+                        </Grid>
+                        <CardLsit listCard={FrontEndList} />
                     </Grid>
-                    <CardLsit listCard={FrontEndList} />
-                </Grid>
-                <Grid item xs={4} className='border-r-2'>
-                    <Grid className='justify-center flex'>
-                        <h1 className='text-white font-atma font-semibold'>
-                            Back End
+                    <Grid item xs={4} className='border-r-2'>
+                        <Grid className='justify-center flex'>
+                            <h1 className='font-semibold'>
+                                Back End
                         </h1>
+                        </Grid>
+                        <CardLsit listCard={BackEndList} />
                     </Grid>
-                    <CardLsit listCard={BackEndList} />
-                </Grid>
-                <Grid item xs={4}>
-                    <Grid className='justify-center flex'>
-                        <h1 className='text-white font-atma font-semibold'>
-                            Other
+                    <Grid item xs={4}>
+                        <Grid className='justify-center flex'>
+                            <h1 className='font-semibold'>
+                                Other
                         </h1>
+                        </Grid>
+                        <CardLsit listCard={OtherList} />
                     </Grid>
-                    <CardLsit listCard={OtherList} />
-                </Grid>
+                </div>
+
+
             </Grid>
-            <Grid item xs={12} className='lg:hidden md:flex sm:flex xl:hidden'>
+            <Grid item xs={12} className='lg:hidden md:hidden sm:flex xl:hidden'>
                 <SnapList ref={snapList} className='gap-8'>
-                     {FrontEndList.map((item) => {return(_renderItem(item))})}
+                    {FrontEndList.map((item) => { return (_renderItem(item)) })}
                 </SnapList>
             </Grid>
+            <div className='mt-12'>
+                <h1 className=' mb-2'>
+                    FrontEnd Developer
+                </h1>
+                <BorderLinearProgress variant="determinate" value={80} />
+            </div>
+            <div className='mt-10 '>
+                <h1 className='mb-2'>
+                    BackEnd Developer
+                </h1>
+                <BorderLinearProgress variant="determinate" value={50} />
+            </div>
+            <div className='mt-10 flex flex-row gap-8 items-center justify-center '>
+                <div className='flex items-center justify-center gap-2'>
+                    <img src={ReactIcon} className='w-8 h-8' />
+                    <h1 className='sm:text-sm'>React Framework <strong className='text-orange-600'>2</strong> Year++</h1>
+                </div>
+                <div className='flex items-center justify-center gap-2'>
+                    <img src={GolangIcon} className='w-12 h-12' />
+                    <h1 className='sm:text-sm'>Go language <strong className='text-orange-600'>1</strong> Year++</h1>
+                </div>
+            </div>
         </Container>
     )
 }

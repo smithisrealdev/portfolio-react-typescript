@@ -8,13 +8,13 @@ module.exports = {
       'xl': {'max': '2800px'},
       // => @media (max-width: 1279px) { ... }
 
-      'lg': {'max': '1023px'},
+      'lg': {'max': '1336px'},
       // => @media (max-width: 1023px) { ... }
 
-      'md': {'max': '767px'},
+      'md': {'max': '1067px'},
       // => @media (max-width: 767px) { ... }
 
-      'sm': {'max': '639px'},
+      'sm': {'max': '839px'},
       // => @media (max-width: 639px) { ... }
     },
     extend: {},
