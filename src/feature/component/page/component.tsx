@@ -16,17 +16,10 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
 SwiperCore.use([EffectCoverflow, Pagination, Autoplay]);
-export default function project() {
+export default function component() {
     const onEnter = ({ currentTarget }: React.MouseEvent<HTMLDivElement>) => {
-        gsap.fromTo(currentTarget,
-            {
-                scale: 1.3
-            },
-            {
-                scale: 1
-            });
+        gsap.fromTo(currentTarget, {scale: 1.3},{scale: 1});
     };
-
     interface CardProps {
         id: number,
         url: string,
@@ -58,7 +51,7 @@ export default function project() {
                     </CardContent>
                     <CardActions disableSpacing className='text-white font-atma border-t-2 bg-slate-200'>
                         <Grid item xs={12} className='flex flex-1 gap-2'>
-                            {toolList.map((item, index) => {
+                            {toolList?.map((item, index) => {
                                 return (
                                     <img key={index} src={item.img} className='h-10 w-10 rounded-md object-cover' />
                                 )
@@ -87,7 +80,7 @@ export default function project() {
                             {detail}
                         </p>
                     </CardContent>
-                    <CardActions disableSpacing className='text-white font-atma border-t-2 bg-slate-400'>
+                    <CardActions disableSpacing className='text-white font-atma border-t-2 bg-orange-50'>
                         <Grid item xs={12} className='flex flex-1 gap-2'>
                             {toolList.map((item, index) => {
                                 return (
@@ -101,8 +94,8 @@ export default function project() {
         )
     }
     return (
-        <Container maxWidth="xl" className="pb-20 bg-main">
-            <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('project.title')} />
+        <Container maxWidth="xl" className="pb-20">
+            <Title noUseLeave={false} noUseEnter={true} text="C|o|m|p|o|n|e|n|t" />
             <Grid item xs={12} className='grid grid-cols-3 sm:grid-cols-2 ss:hidden gap-10 pl-6 ss:pl-0' >
                 {dataList.map((items) => {
                     return renderCardProject(items)

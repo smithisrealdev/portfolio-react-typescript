@@ -16,17 +16,10 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
 SwiperCore.use([EffectCoverflow, Pagination, Autoplay]);
-export default function project() {
+export default function hobby() {
     const onEnter = ({ currentTarget }: React.MouseEvent<HTMLDivElement>) => {
-        gsap.fromTo(currentTarget,
-            {
-                scale: 1.3
-            },
-            {
-                scale: 1
-            });
+        gsap.fromTo(currentTarget, {scale: 1.3},{scale: 1});
     };
-
     interface CardProps {
         id: number,
         url: string,
@@ -87,7 +80,7 @@ export default function project() {
                             {detail}
                         </p>
                     </CardContent>
-                    <CardActions disableSpacing className='text-white font-atma border-t-2 bg-slate-400'>
+                    <CardActions disableSpacing className='text-white font-atma border-t-2 bg-orange-50'>
                         <Grid item xs={12} className='flex flex-1 gap-2'>
                             {toolList.map((item, index) => {
                                 return (
@@ -102,7 +95,7 @@ export default function project() {
     }
     return (
         <Container maxWidth="xl" className="pb-20 bg-main">
-            <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('project.title')} />
+            <Title noUseLeave={false} noUseEnter={true} text="H|o|b|b|y" />
             <Grid item xs={12} className='grid grid-cols-3 sm:grid-cols-2 ss:hidden gap-10 pl-6 ss:pl-0' >
                 {dataList.map((items) => {
                     return renderCardProject(items)

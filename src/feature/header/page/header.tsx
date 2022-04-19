@@ -18,28 +18,16 @@ import { FormatMessage } from '../../change_lang/change'
 
 const pages = [
     {
-        page: 'Home',
-        route: '/'
+        page: 'Component',
+        route: 'Component'
     },
     {
-        page: 'header.about',
-        route: 'about'
+        page: 'Hobby',
+        route: 'Hobby'
     },
     {
-        page: 'header.skill',
-        route: 'skill'
-    },
-    {
-        page: 'header.experiance',
-        route: 'experiance'
-    },
-    {
-        page: 'header.education',
-        route: 'education'
-    },
-    {
-        page: 'header.contact',
-        route: 'contact'
+        page: 'Project',
+        route: 'Project'
     }
 ];
 
@@ -104,7 +92,7 @@ const header = () => {
                                         ))}
                                     </Menu>
                                 </Box>
-                                <Box className='flex gap-16 justify-center text-center font-atma font-semibold' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                                <Box className='flex gap-12 justify-end text-center font-atma font-semibold outline-none' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                                     {pages.map((items) => (
                                     
                                         <Box
@@ -113,7 +101,7 @@ const header = () => {
                                             sx={{ my: 2, color: 'white', display: 'block' }}
                                             onMouseEnter={onEnter} onMouseLeave={onLeave}
                                         >
-                                            <Link to={items.route}>{FormatMessage(items.page)}</Link>
+                                            <Link to={items.route}>{items.page}</Link>
                                         </Box>
                                     ))}
                                 </Box>

@@ -1,9 +1,9 @@
 import ArchieveNexAppLogo from '../../../images/achieveNex-logo.png'
 import CheckQdiLogo from '../../../images/checkQdi-logo.png'
 import ClmWebLogo from '../../../images/clm-web-logo.jpg'
-
+import BeliveAppLogo from '../../../images//beliveApp.png'
 //*ToolList
-import RaactIcon from '../../../images/react_icon.svg'
+import ReactIcon from '../../../images/react_icon.svg'
 import ReduxIcon from '../../../images/redux-icon.webp'
 import MateriaUI from '../../../images/materiaUI-icon.avif'
 import NaviteBaseIcon from '../../../images/nativebase-icon.png'
@@ -15,6 +15,7 @@ import MobXIcon from '../../../images/mobX-icon.png'
 import BootStrapIcon from '../../../images/bootstrap-icon.png'
 import NextJsIcon from '../../../images/nextJs-logo.png'
 
+
 export const dataList = [
     {
         id: 1,
@@ -25,7 +26,7 @@ export const dataList = [
         toolList: [
             {
                 id: 1,
-                img: RaactIcon,
+                img: ReactIcon,
             },
             {
                 id: 2,
@@ -79,7 +80,7 @@ export const dataList = [
         toolList: [
             {
                 id: 1,
-                img: RaactIcon,
+                img: ReactIcon,
             },
             {
                 id: 2,
@@ -96,31 +97,31 @@ export const dataList = [
         ]
     },
 
-    // {
-    //     id: 4,
-    //     url: CheckQdiLogo,
-    //     title: 'CheckQdi (Caninnovation)',
-    //     detail: "CheckQdi is a dedicated space for FREELANCE DIRECTORS to showcase their portfolios. With just few clicks, you'll be able to get new projects straight to your indox",
-    //     link: 'https://www.checkqdi.com/',
-    //     toolList: [
-    //         {
-    //             id: 1,
-    //             img: RaactIcon,
-    //         },
-    //         {
-    //             id: 2,
-    //             img: MobXIcon,
-    //         },
-    //         {
-    //             id: 3,
-    //             img: NextJsIcon,
-    //         },
-    //         {
-    //             id: 4,
-    //             img: BootStrapIcon,
-    //         },
-    //     ]
-    // },
+    {
+        id: 4,
+        url: BeliveAppLogo,
+        title: 'BeliveApp (Caninnovation)',
+        detail: "....",
+        link: '',
+        toolList: [
+            {
+                id: 1,
+                img: ReactIcon,
+            },
+            {
+                id: 2,
+                img: MobXIcon,
+            },
+            {
+                id: 3,
+                img: NextJsIcon,
+            },
+            {
+                id: 4,
+                img: BootStrapIcon,
+            },
+        ]
+    },
 
 
 ]

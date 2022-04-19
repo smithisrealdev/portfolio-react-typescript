@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { Suspense, } from 'react';
 import Title from '../../../shared/components/animation/withAnimationHoveText';
 import Box from '@mui/material/Box';
 import { FrontEndList } from '../mock/dataFrontEndList';
@@ -11,21 +11,10 @@ import Grid from '@mui/material/Grid';
 import { SnapList, SnapItem } from 'react-snaplist-carousel';
 import Card from '@mui/material/Card';
 import { CardActionArea } from '@mui/material';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
-import { styled } from '@mui/material/styles';
 import ReactIcon from '../../../images/React.webp'
 import GolangIcon from '../../../images/Go-Logo.png'
-const BorderLinearProgress = styled(LinearProgress)(({ theme }: any) => ({
-    height: 15,
-    borderRadius: 5,
-    [`&.${linearProgressClasses.colorPrimary}`]: {
-        backgroundColor: '#ffffff',
-    },
-    [`& .${linearProgressClasses.bar}`]: {
-        borderRadius: 5,
-        backgroundColor: '#F44336',
-    },
-}));
+import ProgressFrontEnd from '../components/borderLinearProgressFrontEnd'
+import ProgressBackEnd from '../components/borderLinearProgressBackEnd'
 
 interface TypeProps {
     url: string,
@@ -87,17 +76,20 @@ export default function skill() {
                     {FrontEndList.map((item) => { return (_renderItem(item)) })}
                 </SnapList>
             </Grid>
-            <div className='mt-12'>
-                <h1 className=' mb-2'>
-                    FrontEnd Developer
+            <Suspense fallback={<h1>...Loading</h1>}>
+                <div className='mt-12'>
+                    <h1 className=' mb-2'>
+                        FrontEnd Developer
                 </h1>
-                <BorderLinearProgress variant="determinate" value={80} />
-            </div>
+                    <ProgressFrontEnd />
+                </div>
+            </Suspense>
+
             <div className='mt-10 '>
                 <h1 className='mb-2'>
                     BackEnd Developer
                 </h1>
-                <BorderLinearProgress variant="determinate" value={50} />
+                <ProgressBackEnd />
             </div>
             <div className='mt-10 flex flex-row gap-8 items-center justify-center '>
                 <div className='flex items-center justify-center gap-2'>
@@ -106,7 +98,7 @@ export default function skill() {
                 </div>
                 <div className='flex items-center justify-center gap-2'>
                     <img src={GolangIcon} className='w-12 h-12' />
-                    <h1 className='sm:text-sm'>Go language <strong className='text-orange-600'>1</strong> Year++</h1>
+                    <h1 className='sm:text-sm'>Go language <strong className='text-green-300'>1</strong> Year++</h1>
                 </div>
             </div>
         </Container>
