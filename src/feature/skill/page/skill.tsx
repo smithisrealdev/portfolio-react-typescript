@@ -32,9 +32,8 @@ interface TypeProps {
     text: string
 }
 export default function skill() {
-    const snapList = useRef(null);
     const _renderItem = ({ url, text }: TypeProps) => (
-        <SnapItem snapAlign="start">
+        <SnapItem key={url} snapAlign="start">
             <Card className='mt-4 xl:h-28 xl:w-24 md:h-24 md:w-20 sm:h-22 sm:w-18 ' >
                 <CardActionArea>
                     <img
@@ -84,7 +83,7 @@ export default function skill() {
 
             </Grid>
             <Grid item xs={12} className='lg:hidden md:hidden sm:flex xl:hidden'>
-                <SnapList ref={snapList} className='gap-8'>
+                <SnapList direction='horizontal' className='gap-8'>
                     {FrontEndList.map((item) => { return (_renderItem(item)) })}
                 </SnapList>
             </Grid>

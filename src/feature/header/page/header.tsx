@@ -109,6 +109,7 @@ const header = () => {
                                     
                                         <Box
                                             // onClick={handleCloseNavMenu}
+                                            key={items.page}
                                             sx={{ my: 2, color: 'white', display: 'block' }}
                                             onMouseEnter={onEnter} onMouseLeave={onLeave}
                                         >

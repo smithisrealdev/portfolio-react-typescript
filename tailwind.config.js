@@ -14,7 +14,10 @@ module.exports = {
       'md': {'max': '1067px'},
       // => @media (max-width: 767px) { ... }
 
-      'sm': {'max': '839px'},
+      'sm': {'max': '850px'},
+      // => @media (max-width: 639px) { ... }
+
+      'ss': {'max': '622px'},
       // => @media (max-width: 639px) { ... }
     },
     extend: {},

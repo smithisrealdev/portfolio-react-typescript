@@ -34,7 +34,7 @@ export default function personal_profile() {
 
     const elementContact = ({ link, icon }: ContactProps) => {
         return (
-            <Grid item xs={4} className='box flex w-full h-full' onMouseEnter={onEnter} >
+            <Grid key={link} item xs={4} className='box flex w-full h-full' onMouseEnter={onEnter} >
                 <a href={link} target="_blank">
                     <img className='object-cover  cursor-pointer' src={icon} />
                 </a>

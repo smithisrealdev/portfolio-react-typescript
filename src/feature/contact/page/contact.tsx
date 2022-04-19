@@ -9,7 +9,7 @@ import { gsap } from "gsap";
 import Container from '@mui/material/Container';
 const containerStyle = {
     width: '100%',
-    height: '700px'
+    height: '500px',
 };
 
 const center = {
@@ -60,50 +60,50 @@ function contact() {
     return (
         <Container maxWidth="xl" className=" mb-12 pb-12">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('contact.title')} />
-            <Box sx={{ flexGrow: 1  }}>
-                <Grid container className='pl-8 gap-14 font-atma text-white' >
-                    <Grid item xs={5}>
-                        <span className='flex'>
-                            <h1 >
-                                I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.
+            <Box sx={{ flexGrow: 1 }}>
+                <Grid container className='pl-8 font-atma text-white' >
+                    <Grid item xs={12} className='grid grid-cols-2 sm:grid-cols-1 gap-14'>
+                        <div>
+                            <span className='flex'>
+                                <h1 >
+                                    I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.
                        </h1>
-                        </span>
-                        <Box className='flex text-white gap-4 pt-8'>
-                            <Grid item xs={4}>
-                                <Input placeholder='Name' multiline={false} />
-                            </Grid>
-                            <Grid item xs={8}>
-                                <Input placeholder='Email' multiline={false} />
-                            </Grid>
-                        </Box>
-                        <Box className='pt-4'>
-                            <Grid item xs={12}>
-                                <Input placeholder='Subject' multiline={false} />
-                            </Grid>
-                        </Box>
-                        <Box className='pt-4'>
-                            <Grid item xs={12} className='h-52'>
-                                <Input placeholder='Message' multiline={true} />
-                            </Grid>
-                        </Box>
-                        <Box className='pt-2 flex justify-end'>
-                            <div className='z-20 ' ref={el}>
-                                <div className=' w-36 shadow-2xl bg-orange-100  h-12 resume-custom -z-0 ' />
-                                <div className='boxBg -mt-12 w-36 bg-orange-400 h-12 ' />
-                                <div onMouseEnter={onEnter} onMouseLeave={onLeave} className='box2 -mt-12 w-36 bg-resume h-12 items-center justify-center flex cursor-pointer ' >
-                                    {/* <Link href={ResumePDF} download underline="none"> */}
-                                    <h1 className='font-atma text-white font-medium'>
-                                        {FormatMessage('contact.send')}
-                                    </h1>
-                                    {/* </Link> */}
+                            </span>
+                            <Box className='flex text-white gap-4 pt-8'>
+                                <Grid item xs={4}>
+                                    <Input placeholder='Name' multiline={false} />
+                                </Grid>
+                                <Grid item xs={8}>
+                                    <Input placeholder='Email' multiline={false} />
+                                </Grid>
+                            </Box>
+                            <Box className='pt-4'>
+                                <Grid item xs={12}>
+                                    <Input placeholder='Subject' multiline={false} />
+                                </Grid>
+                            </Box>
+                            <Box className='pt-4'>
+                                <Grid item xs={12} className='h-52'>
+                                    <Input placeholder='Message' multiline={true} />
+                                </Grid>
+                            </Box>
+                            <Box className='pt-2 flex justify-end'>
+                                <div className='z-20 ' ref={el}>
+                                    <div className=' w-36 shadow-2xl bg-orange-100  h-12 resume-custom -z-0 ' />
+                                    <div className='boxBg -mt-12 w-36 bg-orange-400 h-12 ' />
+                                    <div onMouseEnter={onEnter} onMouseLeave={onLeave} className='box2 -mt-12 w-36 bg-resume h-12 items-center justify-center flex cursor-pointer ' >
+                                        {/* <Link href={ResumePDF} download underline="none"> */}
+                                        <h1 className='font-atma text-white font-medium'>
+                                            {FormatMessage('contact.send')}
+                                        </h1>
+                                        {/* </Link> */}
+                                    </div>
                                 </div>
-                            </div>
-                        </Box>
-                    </Grid>
-
-                    <Grid item xs={6} >
+                            </Box>
+                        </div>
                         {isLoaded ? (
                             <GoogleMap
+                                
                                 mapContainerStyle={containerStyle}
                                 center={center}
                                 zoom={10}
