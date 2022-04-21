@@ -12,7 +12,7 @@ export default function withAnimationHoveText({ text, noUseLeave, noUseEnter }: 
         <div className='flex'>
             {splitted.map((textSplite,index) => {
                 return (
-                    <div key={index} className={noUseEnter ? 'cursor-pointer font-semibold xl:text-7xl lg:text-5xl md:text-4xl sm:text-2xl font-atma pb-6 sm:pb-2 text-color-custom z-20' : 'z-20 cursor-pointer font-bold md:text-4xl lg:text-5xl xl:text-7xl sm:text-2xl font-atma pb-6 sm:pb-2 text-white'} onMouseEnter={onEnter} onMouseLeave={noUseLeave ? onLeave : onUseLeave}>
+                    <div key={index} className={noUseEnter ? 'cursor-pointer font-semibold xl:text-7xl lg:text-5xl md:text-4xl sm:text-4xl font-atma pb-6 sm:pb-2 text-color-custom z-20' : 'z-20 cursor-pointer font-bold md:text-4xl lg:text-5xl xl:text-7xl sm:text-4xl font-atma pb-6 sm:pb-2 text-white'} onMouseEnter={onEnter} onMouseLeave={noUseLeave ? onLeave : onUseLeave}>
                         {textSplite}
                     </div>
                 )

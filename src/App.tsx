@@ -1,27 +1,30 @@
 import React from 'react';
-import Project from '../src/feature/project/page/project'
-import Home from '../src/feature/home/page/home'
-import Hobby from '../src/feature/hobby/page/hobby'
-import ComponentPage from '../src/feature/component/page/component'
-import Navbar from '../src/feature/header/page/header'
+import Project from './features/project/page/project'
+import Home from './features/layout/page/layout'
+import Hobby from './features/hobby/page/hobby'
+import ComponentPage from './features/component_page/page/component'
+import Contact from './features/contact/page/contact'
+import Navbar from './features/header/page/header'
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
+import Footer from './features/footer/page/footer';
 function App() {
   return (
     <div className='w-full h-screen bg-main'>
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/hobby" element={<Hobby />} />
-          <Route path="/component" element={<ComponentPage />} />
+          <Route path="/" element={<div className='xl:px-28 xl:py-12 lg:p-12 md:p-8 sm:p-4 bg-main'> <Home />  </div>} />
+          <Route path="/project" element={<div className='xl:px-28 xl:py-4 lg:p-12 bg-main'> <Project /> </div>} />
+          <Route path="/hobby" element={<div className='xl:px-28 xl:py-4 lg:p-12 bg-main'> <Hobby /></div>} />
+          <Route path="/component" element={<div className='xl:px-28 xl:py-4 lg:p-12 bg-main'> <ComponentPage /></div>} />
+          <Route path="/contact" element={<div className='xl:px-28 xl:py-4 lg:p-12 bg-main'> <Contact /></div>} />
         </Routes>
       </BrowserRouter>
-      
+      <Footer />
     </div>
   );
 }

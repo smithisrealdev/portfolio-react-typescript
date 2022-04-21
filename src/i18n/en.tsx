@@ -71,6 +71,8 @@ export const en =  {
       
       //* Project Page
        'project.title' : 'P|r|o|j|e|c|t',
+       'hobby.title' : 'H|o|b|b|y',
+       'component.title' : 'C|o|m|p|o|n|e|n|t',
 
        //* Contact Page
        'contact.title' : 'C|o|n|t|a|c|t',
