@@ -16,6 +16,7 @@ import GolangIcon from '../../../assets/images/Go-Logo.png'
 import ProgressFrontEnd from '../components/borderLinearProgressFrontEnd'
 import ProgressBackEnd from '../components/borderLinearProgressBackEnd'
 import Text from '../../../shared/components/Text'
+import ListFrontEnd from '../container/callSanityFrontEnd'
 interface TypeProps {
     url: string,
     text: string
@@ -41,6 +42,7 @@ export default function skill() {
     return (
         <Container maxWidth="xl" className="pl-28 bg-main pb-24 font-atma text-white">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('skill.title')} />
+            <ListFrontEnd />
             <Grid container spacing={2} >
                 <div className='lg:flex md:flex sm:hidden xl:flex'>
                     <Grid item xs={4} className='border-r-2 '>

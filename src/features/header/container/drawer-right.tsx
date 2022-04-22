@@ -74,7 +74,7 @@ export default function DrawerRight() {
                 <Link to={list.route}> <h1 className='font-atma text-2xl font-semibold text-center'>{list.page}</h1></Link>
               } />
             </ListItem>
-          ) : <div className='w-full cursor-pointer p-2  bg-resume font-atma text-2xl font-bold text-center border-2 border-red-500'>
+          ) : <div key={list.page} className='w-full cursor-pointer p-2  bg-resume font-atma text-2xl font-bold text-center border-2 border-red-500'>
             <Links href={ResumePDF} target='_blank' download underline="none">
               <h1 className='text-white'>
                 {FormatMessage('main.resume')}
