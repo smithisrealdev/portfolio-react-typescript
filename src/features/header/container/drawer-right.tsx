@@ -8,6 +8,10 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 import { onEnter, onLeave } from '../../../shared/components/animation/withHoverText'
+import Links from '@mui/material/Link';
+import { FormatMessage } from '../../lang/change'
+import ResumePDF from '../../../assets/ResumeApichet.pdf';
+import Text from '../../../shared/components/Text'
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 const pages = [
   {
@@ -29,7 +33,11 @@ const pages = [
   {
     page: 'Contact',
     route: 'Contact'
-  }
+  },
+  {
+    page: 'Resume',
+    route: 'Resume'
+  },
 ];
 export default function DrawerRight() {
   const [state, setState] = React.useState({
@@ -59,13 +67,21 @@ export default function DrawerRight() {
       className='h-full w-full flex justify-center items-center bg-main text-white'
     >
       <List>
-          {pages.map((list, index) => (
+        {pages.map((list, index) => (
+          list.page !== "Resume" ? (
             <ListItem button key={list.page}>
               <ListItemText onMouseEnter={onEnter} onMouseLeave={onLeave} primary={
                 <Link to={list.route}> <h1 className='font-atma text-2xl font-semibold text-center'>{list.page}</h1></Link>
               } />
             </ListItem>
-          ))}
+          ) : <div className='w-full cursor-pointer p-2  bg-resume font-atma text-2xl font-bold text-center border-2 border-red-500'>
+            <Links href={ResumePDF} target='_blank' download underline="none">
+              <h1 className='text-white'>
+                {FormatMessage('main.resume')}
+              </h1>
+            </Links>
+          </div>
+        ))}
 
       </List>
     </Box>

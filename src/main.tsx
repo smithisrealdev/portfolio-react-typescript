@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import './input.css'
+import './utility/input.css'
 import App from './App'
 
 const rootElement = document.getElementById('root');

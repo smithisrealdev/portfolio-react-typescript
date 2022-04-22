@@ -36,6 +36,9 @@
 .lg\:-mt-78{
     margin-top:  -306px 
 }
+.focus\:border-custom-contact{
+    border-color: #F44336;
+}
 
 .rounded-tl-custom {
     border-top-left-radius: 460px;

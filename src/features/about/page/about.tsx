@@ -39,12 +39,12 @@ export default function about() {
                                 <Grid item xs={12}>
                                     <div className='flex justify-center items-center sm:w-full sm:pt-14 lg:pt-10'>
                                         <div>
-                                            <Grid className='ml-4 resume-custom -z-0 ' >
+                                            <div className='ml-4 resume-custom -z-0 ' >
                                                 <div className='-mt-4 rounded-md xl:w-72 xl:h-72 sm:h-36 sm:w-36 md:h-48 md:w-48 lg:h-56 lg:w-56 relative bg-slate-200' />
-                                            </Grid>
-                                            <Grid className='cursor-pointer absolute sm:-mt-40 lg:-mt-60 md:-mt-52 -mt-78' onMouseEnter={onEnter} onMouseLeave={onLeave}>
+                                            </div>
+                                            <div className='cursor-pointer absolute sm:-mt-40 lg:-mt-60 md:-mt-52 -mt-78' onMouseEnter={onEnter} onMouseLeave={onLeave}>
                                                 <img className=' box1 object-cover rounded-md xl:w-72 xl:h-72 sm:h-36 sm:w-36 md:h-48 md:w-48 lg:h-56 lg:w-56' src={ProfileBg} />
-                                            </Grid>
+                                            </div>
                                         </div>
                                     </div>
                                 </Grid>

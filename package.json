@@ -26,6 +26,7 @@
     "@types/react-router-hash-link": "^2.4.5",
     "@types/react-scroll": "^1.8.3",
     "@types/styled-components": "^5.1.24",
+    "@types/supercluster": "^7.1.0",
     "gsap": "^3.10.2",
     "i18next": "^21.6.14",
     "i18next-browser-languagedetector": "^6.1.4",
