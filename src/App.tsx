@@ -5,6 +5,7 @@ import Hobby from './features/hobby/page/hobby'
 import ComponentPage from './features/component_page/page/component'
 import Contact from './features/contact/page/contact'
 import Navbar from './features/header/page/header'
+import Loading from './utility/loading'
 import {
   BrowserRouter,
   Routes,
@@ -13,7 +14,7 @@ import {
 import Footer from './features/footer/page/footer';
 function App() {
   return (
-    <div className='w-full h-screen bg-main'>
+    <div className='flex flex-col bg-main'>
       <BrowserRouter>
         <Navbar />
         <Routes>

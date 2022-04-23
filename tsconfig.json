@@ -21,7 +21,8 @@
     "jsx": "react-jsx",
     "types": [
       "react/next",
-      "react-dom/next"
+      "react-dom/next",
+      "node"
     ],
   },
   "include": [

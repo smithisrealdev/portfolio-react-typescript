@@ -24,14 +24,11 @@ type IndexListProps = number
 type TitleProps = string
 type CardProps = {
     id: number,
-    url: string,
+    url: any,
     title: string,
     detail: string,
     link: string,
-    toolList: {
-        id: number,
-        img: string
-    }[]
+    tool: any
 }
 
 export default function projects({data,title}:ProjectListProps ) {
@@ -44,15 +41,16 @@ export default function projects({data,title}:ProjectListProps ) {
                 scale: 1
             });
     };
-    const renderCardProject = ({ url, title, detail, link, toolList }: CardProps) => {
+    const renderCardProject = ({ id, title, detail, link,url, tool }: CardProps) => {
+        
         return (
-            <Card key={title} className='max-w-sm'>
+            <Card key={id} className='max-w-sm'>
                 <a href={link ? link : undefined} target="_blank">
                     <CardMedia
                         onMouseEnter={onEnter}
                         className=' object-cover h-52 bg-main'
                         component="img"
-                        image={url}
+                        image={url.asset?.url}
                     />
                     <CardContent className='h-36'>
                         <h1 className='font-atma font-semibold'>
@@ -64,9 +62,9 @@ export default function projects({data,title}:ProjectListProps ) {
                     </CardContent>
                     <CardActions disableSpacing className='text-white font-atma border-t-2 bg-slate-200'>
                         <Grid item xs={12} className='flex flex-1 gap-2'>
-                            {toolList.map((item, index) => {
+                            {tool.map((item:any) => {
                                 return (
-                                    <img key={index} src={item.img} className='h-10 w-10 rounded-md object-cover' />
+                                    <img key={item.id} src={item.image?.asset?.url} className='h-10 w-10 rounded-md object-cover' />
                                 )
                             })}
                         </Grid>
@@ -75,15 +73,15 @@ export default function projects({data,title}:ProjectListProps ) {
             </Card>
         )
     }
-    const renderSwiperCard = ({ url, title, detail, link, toolList }: CardProps) => {
+    const renderSwiperCard = ({id, title, detail, link,url,tool }: CardProps) => {
         return (
-            <Card key={title} className='max-w-sm'>
+            <Card key={id} className='max-w-sm'>
                 <a href={link ? link : undefined} target="_blank">
                     <CardMedia
                         onMouseEnter={onEnter}
                         className=' object-cover h-52 bg-main'
                         component="img"
-                        image={url}
+                        image={url.asset?.url}
                     />
                     <CardContent className='h-36'>
                         <h1 className='font-atma font-semibold'>
@@ -95,9 +93,9 @@ export default function projects({data,title}:ProjectListProps ) {
                     </CardContent>
                     <CardActions disableSpacing className='text-white font-atma border-t-2 bg-slate-400'>
                         <Grid item xs={12} className='flex flex-1 gap-2'>
-                            {toolList.map((item, index) => {
+                            {tool.map((item:any) => {
                                 return (
-                                    <img key={index} src={item.img} className='h-10 w-10 rounded-md object-cover' />
+                                    <img key={item.id} src={item.image?.asset?.url} className='h-10 w-10 rounded-md object-cover' />
                                 )
                             })}
                         </Grid>
@@ -107,7 +105,7 @@ export default function projects({data,title}:ProjectListProps ) {
         )
     }
     return (
-        <Container maxWidth="xl" className="pb-20 bg-main">
+        <Container maxWidth="xl" className="pb-20">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage(title)} />
             <Grid item xs={12} className='grid grid-cols-3 sm:grid-cols-2 ss:hidden gap-10 pl-6 ss:pl-0' >
                 {data.map((items:DataListProps) => {

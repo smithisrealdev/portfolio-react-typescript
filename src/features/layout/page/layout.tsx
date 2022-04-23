@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Blog from '../../personal_profile/page/personal_profile'
 import About from '../../about/page/about'
 import Skill from '../../skill/page/skill'
@@ -7,19 +7,26 @@ import Eduction from '../../education/page/education';
 import Experiance from '../../experaince/page/experiance';
 import Project from '../../project/page/project';
 import Contact from '../../contact/page/contact';
-
+import Loading from '../../../utility/loading'
 function layout() {
-
-  return (
-    <Box className='bg-main'>
+  const [done, setDone] = useState(false)
+  useEffect(() => {
+    setTimeout(() => {
+      setDone(true)
+    }, 2000);
+  }, [])
+  return !done ? (
+    <Loading />
+  ) : (
+    <Box className='flex flex-col min-h-screen'>
       <Blog />
-      <About />
+      < About />
       <Skill />
       {/* <Eduction /> */}
       <Experiance />
-      <Project />
+      {/* <Project /> */}
       <Contact />
-    </Box>
+    </Box >
   );
 }
 

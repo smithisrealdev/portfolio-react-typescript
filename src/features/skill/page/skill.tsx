@@ -1,9 +1,6 @@
-import React, { Suspense, } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import Title from '../../../shared/components/animation/withAnimationHoveText';
 import Box from '@mui/material/Box';
-import { FrontEndList } from '../mock/dataFrontEndList';
-import { BackEndList } from '../mock/dataBackEndlist';
-import { OtherList } from '../mock/dataOtherList';
 import { FormatMessage } from '../../lang/change'
 import CardLsit from '../components/cardList'
 import Container from '@mui/material/Container';
@@ -16,23 +13,83 @@ import GolangIcon from '../../../assets/images/Go-Logo.png'
 import ProgressFrontEnd from '../components/borderLinearProgressFrontEnd'
 import ProgressBackEnd from '../components/borderLinearProgressBackEnd'
 import Text from '../../../shared/components/Text'
-import ListFrontEnd from '../container/callSanityFrontEnd'
+import SanityClient from '../../../config/client'
 interface TypeProps {
-    url: string,
-    text: string
+    id: number,
+    title: string,
+    icon: any,
 }
 export default function skill() {
-    const _renderItem = ({ url, text }: TypeProps) => (
-        <SnapItem key={url} snapAlign="start">
+    const [listFrontEnd, setListFrontEnd] = useState([])
+    const [listBackEnd, setListBackEnd] = useState([])
+    const [listOther, setListOther] = useState([])
+    useEffect(() => {
+        async function fetchFrontEnd() {
+            let response = await SanityClient.fetch(`
+            *[_type == "frontEnd"]{
+                id,
+                title,
+                icon{
+                    asset->{
+                        _id,
+                        url
+                    },
+                }
+            }
+            `);
+            let data = await response;
+            let sortedList = data.sort((a: any, b: any) => a.id - b.id);
+            setListFrontEnd(sortedList)
+        }
+        async function fetchBackEnd() {
+            let response = await SanityClient.fetch(`
+            *[_type == "backEnd"]{
+                id,
+                title,
+                icon{
+                    asset->{
+                        _id,
+                        url
+                    },
+                }
+            }
+            `);
+            let data = await response;
+            let sortedList = data.sort((a: any, b: any) => a.id - b.id);
+            setListBackEnd(sortedList)
+        }
+        async function fetchOther() {
+            let response = await SanityClient.fetch(`
+            *[_type == "other"]{
+                id,
+                title,
+                icon{
+                    asset->{
+                        _id,
+                        url
+                    },
+                }
+            }
+            `);
+            let data = await response;
+            let sortedList = data.sort((a: any, b: any) => a.id - b.id);
+            setListOther(sortedList)
+        }
+        fetchFrontEnd()
+        fetchBackEnd()
+        fetchOther()
+    }, [])
+    const _renderItem = ({ id,icon, title }: TypeProps) => (
+        <SnapItem key={id} snapAlign="start">
             <Card className='mt-4 xl:h-28 xl:w-24 md:h-24 md:w-20 sm:h-22 sm:w-18 ' >
                 <CardActionArea>
                     <img
                         className=' object-cover w-full xl:h-20 lg:h-20 md:h-16 sm:h-18 bg-main'
-                        src={url}
+                        src={icon.asset.url}
                     />
                     <Box className='flex w-full items-center justify-center' >
                         <p className='xl:text-lg md:text-base sm:text-sm font-medium' >
-                            {text}
+                            {title}
                         </p>
                     </Box>
                 </CardActionArea>
@@ -42,32 +99,31 @@ export default function skill() {
     return (
         <Container maxWidth="xl" className="pl-28 bg-main pb-24 font-atma text-white">
             <Title noUseLeave={false} noUseEnter={true} text={FormatMessage('skill.title')} />
-            <ListFrontEnd />
             <Grid container spacing={2} >
                 <div className='lg:flex md:flex sm:hidden xl:flex'>
                     <Grid item xs={4} className='border-r-2 '>
                         <Grid className='justify-center flex'>
                             <Text text='Front End' className='font-semibold' />
                         </Grid>
-                        <CardLsit listCard={FrontEndList} />
+                        <CardLsit listCard={listFrontEnd} />
                     </Grid>
                     <Grid item xs={4} className='border-r-2'>
                         <Grid className='justify-center flex'>
                             <Text text='Back End' className='font-semibold' />
                         </Grid>
-                        <CardLsit listCard={BackEndList} />
+                        <CardLsit listCard={listBackEnd} />
                     </Grid>
                     <Grid item xs={4}>
                         <Grid className='justify-center flex'>
                             <Text text='Other' className='font-semibold' />
                         </Grid>
-                        <CardLsit listCard={OtherList} />
+                        <CardLsit listCard={listOther} />
                     </Grid>
                 </div>
             </Grid>
             <Grid item xs={12} className='lg:hidden md:hidden sm:flex xl:hidden'>
                 <SnapList direction='horizontal' className='gap-8'>
-                    {FrontEndList.map((item) => { return (_renderItem(item)) })}
+                    {listFrontEnd.map((item:any) => { return (_renderItem(item)) })}
                 </SnapList>
             </Grid>
             <Suspense fallback={<h1>...Loading</h1>}>
