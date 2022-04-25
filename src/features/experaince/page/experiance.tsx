@@ -17,7 +17,7 @@ export default function experiance() {
     useEffect(() => {
         async function fetchData() {
             let response = await SanityClient.fetch(`
-            *[_type == "experiance"]{
+            *[_type == "experaince"]{
                 id,
                 detailJob,
                 location,

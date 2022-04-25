@@ -36,7 +36,7 @@ export default function project() {
         }
         setTimeout(() => {
             fetchData()
-        }, 2000)
+        }, 2500)
     }, [])
     
     return !done ? (
