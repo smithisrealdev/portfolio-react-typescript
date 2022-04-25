@@ -33,13 +33,14 @@ export default function footer() {
                             <Text text={`${githubInfo.stars}`} className=' box1 font-semibold' />
                         </div>
                         <div className='flex gap-3 items-center'>
-                            <img src={MergeIcon} className='max-h-8' />
-                            <Text text={`${githubInfo.forks}`} className=' box2 font-semibold' />
-                        </div>
-                        <div className='flex gap-3 items-center'>
                             <img src={TelescopeIcon} className='max-h-8' />
                             <Text text={`${githubInfo.watch}`} className=' box3 font-semibold' />
                         </div>
+                        <div className='flex gap-3 items-center'>
+                            <img src={MergeIcon} className='max-h-8' />
+                            <Text text={`${githubInfo.forks}`} className=' box2 font-semibold' />
+                        </div>
+                        
                     </div>
                 </a>
 
