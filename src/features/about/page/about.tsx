@@ -31,7 +31,7 @@ export default function about() {
                     <Grid item xs={12} className='xl:text-xl sm:text-sm md:text-base lg:text-lg font-light font-atma text-white'>
                         <Grid item xs={12} className='flex sm:block gap-16'>
                             <Grid item xs sm={12} className='xl:mr-40'>
-                                {FormatMessage('about.story.1')} <b className='font-semibold'>{FormatMessage('about.story.2')}</b> {FormatMessage('about.story.3')} <b className='font-semibold'>{FormatMessage('about.story.4')}</b> {FormatMessage('about.story.5')}
+                                {FormatMessage('about.story.1')}
                                 <Grid className='flex pt-12 sm:pt-6 gap-8 sm:hidden' >
                                     <ResumeBtn />
                                 </Grid>
